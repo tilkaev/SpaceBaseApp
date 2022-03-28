@@ -18,8 +18,8 @@
         </Grid.RowDefinitions>
         <Grid x:Name="grdHeader" Grid.ColumnSpan="2" Background="#05fb3b" MouseDown="grdHeader_MouseDown">
             <TextBlock Text="Authorization" FontSize="24" Foreground="#000"
-                       FontFamily="./Fonts/#Handjet Square Double Medium" Margin="15 5 0 0"></TextBlock>
-            <Image x:Name="btnClose" Source="Icons/closeicon.png" HorizontalAlignment="Right"
+                       FontFamily="/Fonts/#Handjet Square Double Medium" Margin="15 5 0 0"></TextBlock>
+            <Image x:Name="btnClose" Source="/Icons/closeicon.png" HorizontalAlignment="Right"
                    Width="25" Margin="0 3 6 3" MouseDown="btnClose_MouseDown"></Image>
         </Grid>
         <Border Background="#012a11" Grid.Row="1" CornerRadius="75" Margin="75 50 75 50">
@@ -27,13 +27,13 @@
                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                     <StackPanel Orientation="Horizontal" Margin="0 0 35 0">
                         <TextBlock x:Name="txtChoose2" Text=">>" Visibility="Hidden" Foreground="White" 
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" FontSize="32" Margin="0 3 10 0">
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" FontSize="32" Margin="0 3 10 0">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#00FF75"/>
                             </TextBlock.Effect>
                         </TextBlock>
                         <TextBox x:Name="tbLogin" Width="250" Height="40" CaretBrush="#fff" SelectionBrush="#fff" Foreground="#fff" 
-                                 BorderBrush="#fff" materialDesign:HintAssist.Hint="Login" FontFamily="./Fonts/#Handjet Square Double Medium"
+                                 BorderBrush="#fff" materialDesign:HintAssist.Hint="Login" FontFamily="/Fonts/#Handjet Square Double Medium"
                                  FontSize="28" GotFocus="tbLogin_GotFocus" LostFocus="tbLogin_LostFocus">
                             <TextBox.Resources>
                                 <ResourceDictionary>
@@ -51,13 +51,13 @@
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="0 0 35 0">
                         <TextBlock x:Name="txtChoose3" Text=">>" Visibility="Hidden" Foreground="White"
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" FontSize="32" Margin="0 13 10 0">
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" FontSize="32" Margin="0 13 10 0">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#00FF75"/>
                             </TextBlock.Effect>
                         </TextBlock>
                         <PasswordBox x:Name="pbPassword" Width="250" Height="40" CaretBrush="#fff" SelectionBrush="#fff" Foreground="#fff"
-                                     BorderBrush="#fff" materialDesign:HintAssist.Hint="Password" FontFamily="./Fonts/#Handjet Square Double Medium"
+                                     BorderBrush="#fff" materialDesign:HintAssist.Hint="Password" FontFamily="/Fonts/#Handjet Square Double Medium"
                                      FontSize="28" Margin="0 10 0 25" PasswordChar="*" GotFocus="pbPassword_GotFocus" LostFocus="pbPassword_LostFocus">
                             <PasswordBox.Resources>
                                 <ResourceDictionary>
@@ -75,13 +75,13 @@
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 0 40 0">
                         <TextBlock x:Name="txtChoose" Text=">>" Visibility="Hidden" Foreground="White"
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" FontSize="32" Margin="0 -3 10 0">
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" FontSize="32" Margin="0 -3 10 0">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#00FF75"/>
                             </TextBlock.Effect>
                         </TextBlock>
                         <TextBlock x:Name="btnLogin" Text="Log In" Foreground="White" 
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" FontSize="28" 
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" FontSize="28" 
                                    MouseEnter="btnLogin_MouseEnter" MouseLeave="btnLogin_MouseLeave" 
                                    MouseLeftButtonDown="btnLogin_MouseLeftButtonDown">
                             <TextBlock.Effect>
@@ -99,7 +99,7 @@ Local IPv6-address channel . : fe80::f48c:a7ed:c6a9:5140%12&#10;
 IPv4-address. . . . . . . . : 192.168.3.120&#10;
 SubNEt Mask . . . . . . . . : 255.255.252.0&#10;
 Main socket. . . . . . . . : 192.168.0.3&#10;
-C:\Users\Programmer>" Foreground="#fff" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontFamily="./Fonts/#Handjet Square Double Medium" Opacity="0.7" FontSize="18" Grid.Row="1">
+C:\Users\Programmer>" Foreground="#fff" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontFamily="/Fonts/#Handjet Square Double Medium" Opacity="0.7" FontSize="18" Grid.Row="1">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#00FF75" Opacity="0.35"/>
             </Label.Effect>
