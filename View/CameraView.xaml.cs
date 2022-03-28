@@ -14,17 +14,48 @@ using System.Windows.Shapes;
 
 namespace SpaceBaseApp
 {
-    /// <summary>
-    /// Логика взаимодействия для CameraView.xaml
-    /// </summary>
     public partial class CameraView : Window
     {
-        public CameraView()
+
+        
+        string[] CAMERANAMES = {
+            "Cam 1 Conference room",
+            "Cam 2 Rest room",
+            "Cam 3 room",
+            "Cam 4 room",
+            "Cam 5 room",
+            "Cam 6 room",
+            "Cam 7 room",
+            "Cam 8 room",
+            "Cam 9 room",
+            "Cam 10 room"
+        };
+
+        string[] CAMERIMAGES = {
+            "/Images/Cam1.png",
+            "/Images/Cam2.jpg",
+            "Cam 3 room",
+            "Cam 4 room",
+            "Cam 5 room",
+            "Cam 6 room",
+            "Cam 7 room",
+            "Cam 8 room",
+            "Cam 9 room",
+            "Cam 10 room"
+        };
+
+
+        int indexCamera;
+
+        public CameraView(int indexCamera=0)
         {
+            this.indexCamera = indexCamera;
             InitializeComponent();
-            FrameManager.CamFrame = cameraFrame;
+            nameCamera.Text = CAMERANAMES[indexCamera];
         }
 
+
+        #region EVENTS
         private void btnBack_MouseEnter(object sender, MouseEventArgs e)
         {
             var converter = new BrushConverter();
@@ -61,8 +92,6 @@ namespace SpaceBaseApp
             btnNext.Background = (Brush)converter.ConvertFrom("#005738");
         }
 
-        //////////////////////////////////////////////////////
-
         private void grdHeader_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
@@ -70,6 +99,36 @@ namespace SpaceBaseApp
                 this.DragMove();
             }
         }
+
+        #endregion
+
+
+        public void ChangeIndex(bool up = true)
+        {
+            int temp = indexCamera;
+            if (up)
+            {
+                temp++;
+            }
+            else
+            {
+                temp--;
+            }
+
+            if (temp >= 0 && temp < 10)
+            {
+                indexCamera = temp;
+                nameCamera.Text = CAMERANAMES[indexCamera];
+
+                BitmapImage bi3 = new BitmapImage();
+                bi3.BeginInit();
+                bi3.UriSource = new Uri(CAMERIMAGES[indexCamera], UriKind.Relative);
+                bi3.EndInit();
+                imageCamera.Stretch = Stretch.Fill;
+                imageCamera.Source = bi3;
+            }
+        }
+
 
         private void btnClose_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -86,12 +145,12 @@ namespace SpaceBaseApp
 
         private void btnPrevious_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            //FrameManager.CamFrame.GoBack();
+            ChangeIndex(false);
         }
 
         private void btnNext_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            FrameManager.CamFrame.Navigate(new Cam2Page());
+            ChangeIndex(true);
         }
     }
 }

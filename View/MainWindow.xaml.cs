@@ -86,7 +86,7 @@ namespace SpaceBaseApp
             if (e.ChangedButton == MouseButton.Left)
             {
                 FrameManager.AnimationWindow(this, false);
-                await Task.Delay(TimeSpan.FromMilliseconds(1000));
+                await Task.Delay(TimeSpan.FromMilliseconds(500));
                 this.Close();
             }
         }
