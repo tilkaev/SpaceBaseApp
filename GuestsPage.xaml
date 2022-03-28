@@ -1,0 +1,159 @@
+﻿<Page x:Class="SpaceBaseApp.GuestsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SpaceBaseApp"
+      xmlns:wctprimitives="using:Microsoft.Toolkit.Uwp.UI.Controls.Primitives"
+      mc:Ignorable="d" 
+      d:DesignHeight="640" d:DesignWidth="980"
+      Title="GuestsPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="300"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <DataGrid BorderBrush="#05fb3b" BorderThickness="5" Background="#003824" AutoGenerateColumns="False" ColumnWidth="*">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Last name">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="Background" Value="#003824"/>
+                            <Setter Property="Foreground" Value="#05fb3b"/>
+                            <Setter Property="BorderBrush" Value="#05fb3b"/>
+                            <Setter Property="BorderThickness" Value="0 0 0 2"/>
+                            <Setter Property="FontFamily" Value="./Fonts/#Handjet Square Double Medium"/>
+                            <Setter Property="FontSize" Value="20"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="First name">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="Background" Value="#003824"/>
+                            <Setter Property="Foreground" Value="#05fb3b"/>
+                            <Setter Property="BorderBrush" Value="#05fb3b"/>
+                            <Setter Property="BorderThickness" Value="0 0 0 2"/>
+                            <Setter Property="FontFamily" Value="./Fonts/#Handjet Square Double Medium"/>
+                            <Setter Property="FontSize" Value="18"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Patronymic">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="Background" Value="#003824"/>
+                            <Setter Property="Foreground" Value="#05fb3b"/>
+                            <Setter Property="BorderBrush" Value="#05fb3b"/>
+                            <Setter Property="BorderThickness" Value="0 0 0 2"/>
+                            <Setter Property="FontFamily" Value="./Fonts/#Handjet Square Double Medium"/>
+                            <Setter Property="FontSize" Value="20"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Age">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="Background" Value="#003824"/>
+                            <Setter Property="Foreground" Value="#05fb3b"/>
+                            <Setter Property="BorderBrush" Value="#05fb3b"/>
+                            <Setter Property="BorderThickness" Value="0 0 0 2"/>
+                            <Setter Property="FontFamily" Value="./Fonts/#Handjet Square Double Medium"/>
+                            <Setter Property="FontSize" Value="20"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Deck">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="Background" Value="#003824"/>
+                            <Setter Property="Foreground" Value="#05fb3b"/>
+                            <Setter Property="BorderBrush" Value="#05fb3b"/>
+                            <Setter Property="BorderThickness" Value="0 0 0 2"/>
+                            <Setter Property="FontFamily" Value="./Fonts/#Handjet Square Double Medium"/>
+                            <Setter Property="FontSize" Value="20"/>
+                            <Setter Property="SeparatorBrush" Value="#05fb3b"/>
+                            <Setter Property="SeparatorVisibility" Value="Visible"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="№ Apartment">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="Background" Value="#003824"/>
+                            <Setter Property="Foreground" Value="#05fb3b"/>
+                            <Setter Property="BorderBrush" Value="#05fb3b"/>
+                            <Setter Property="BorderThickness" Value="0 0 0 2"/>
+                            <Setter Property="FontFamily" Value="./Fonts/#Handjet Square Double Medium"/>
+                            <Setter Property="FontSize" Value="20"/>
+                            <Setter Property="SeparatorBrush" Value="#05fb3b"/>
+                            <Setter Property="SeparatorVisibility" Value="Visible"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Border Grid.Column="1" Background="#005738" BorderThickness="5" BorderBrush="#05fb3b" Margin="10 0 0 0">
+            <Grid>
+                <StackPanel>
+                    <TextBlock Text="Search:" FontSize="24" Foreground="#05fb3b" FontFamily="./Fonts/#Handjet Square Double Medium" HorizontalAlignment="Left" Margin="10 20 0 0">
+                        <TextBlock.Effect>
+                            <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
+                        </TextBlock.Effect>
+                    </TextBlock>
+                    <TextBox x:Name="tbSearch" Height="30" Width="260" BorderBrush="#05fb3b"
+                             BorderThickness="3" Background="#003824"
+                             FontFamily="./Fonts/#Handjet Square Double Medium" Foreground="#05fb3b"
+                             Margin="0 5 0 0" FontSize="24" VerticalContentAlignment="Center" SelectionBrush="#05fb3b">
+                        <TextBox.Style>
+                            <Style TargetType="TextBox">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type TextBox}">
+                                            <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                                                <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                                            </Border>
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsEnabled" Value="false">
+                                                    <Setter Property="Opacity" TargetName="border" Value="0.56"/>
+                                                </Trigger>
+                                                <Trigger Property="IsMouseOver" Value="true">
+                                                    <Setter Property="BorderBrush" TargetName="border" Value="#05fb3b"/>
+                                                </Trigger>
+                                                <Trigger Property="IsFocused" Value="true">
+                                                    <Setter Property="BorderBrush" TargetName="border" Value="#05fb3b"/>
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </TextBox.Style>
+                    </TextBox>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 10">
+                    <Border x:Name="btnAdd" Grid.Row="2" HorizontalAlignment="Left" Width="260" Height="40"
+                            BorderBrush="#05fb3b" BorderThickness="5" Margin="0 0 0 10" MouseDown="btnAdd_MouseDown"
+                            MouseEnter="btnAdd_MouseEnter" MouseLeave="btnAdd_MouseLeave">
+                        <TextBlock Text="Add" FontSize="24" TextAlignment="Center" Foreground="#05fb3b" FontFamily="./Fonts/#Handjet Square Double Medium" VerticalAlignment="Center">
+                            <TextBlock.Effect>
+                                <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
+                            </TextBlock.Effect>
+                        </TextBlock>
+                    </Border>
+                    <Border x:Name="btnDelete" Grid.Row="2" HorizontalAlignment="Left" Width="260" Height="40"
+                            BorderBrush="#05fb3b" BorderThickness="5" Margin="0 0 0 0" MouseDown="btnDelete_MouseDown"
+                            MouseEnter="btnDelete_MouseEnter" MouseLeave="btnDelete_MouseLeave">
+                        <TextBlock Text="Delete" FontSize="24" TextAlignment="Center" Foreground="#05fb3b" FontFamily="./Fonts/#Handjet Square Double Medium" VerticalAlignment="Center">
+                            <TextBlock.Effect>
+                                <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
+                            </TextBlock.Effect>
+                        </TextBlock>
+                    </Border>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>
