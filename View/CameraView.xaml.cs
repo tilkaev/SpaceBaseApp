@@ -52,6 +52,15 @@ namespace SpaceBaseApp
             this.indexCamera = indexCamera;
             InitializeComponent();
             nameCamera.Text = CAMERANAMES[indexCamera];
+
+
+
+            BitmapImage bi3 = new BitmapImage();
+            bi3.BeginInit();
+            bi3.UriSource = new Uri(CAMERIMAGES[indexCamera], UriKind.Relative);
+            bi3.EndInit();
+            imageCamera.Stretch = Stretch.Fill;
+            imageCamera.Source = bi3;
         }
 
 
