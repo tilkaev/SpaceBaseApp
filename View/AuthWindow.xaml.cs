@@ -25,8 +25,7 @@ namespace SpaceBaseApp
         public AuthWindow()
         {
             InitializeComponent();
-            FrameManager.TypewriteTextblock(txtIpconfig.Text, txtIpconfig, TimeSpan.FromSeconds(10));
-            txtIpconfig.Text += "не правильный пароль";
+            FrameManager.TypewriteTextblock(txtIpconfig.Text, txtIpconfig, TimeSpan.FromSeconds(10));          
         }
 
 
@@ -70,7 +69,10 @@ namespace SpaceBaseApp
             string login = tbLogin.Text;
             string password = pbPassword.Password;
 
+            
 
+           
+            
             if (login is "" & password is "")
             {
                 //image_password.ToolTip = "Пустые поля";
