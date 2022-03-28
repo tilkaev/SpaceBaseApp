@@ -1,5 +1,7 @@
-﻿using System;
+﻿using SpaceBaseApp.Core;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -58,6 +60,51 @@ namespace SpaceBaseApp
 
         private void btnLogin_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) //кнопка логин
         {
+            string login = tbLogin.Text;
+            string password = pbPassword.Password;
+
+
+            if (login is "" & password is "")
+            {
+                //image_password.ToolTip = "Пустые поля";
+                //image_login.ToolTip = "Пустые поля";
+                return;
+            }
+            else
+            {
+                //image_login.Visibility = Visibility.Collapsed;
+                //image_password.Visibility = Visibility.Collapsed;
+            }
+
+
+            string sql = String.Format("select логин from Аккаунты_диспетчер where логин collate Latin1_General_CS_AS like '{0}' and пароль collate Latin1_General_CS_AS like '{1}'", login, password);
+
+            SQL sqls = new SQL();
+
+            try
+            {
+                sqls.SQLConnect();
+                DataTable dt = sqls.Inquiry(sql);
+                sqls.Close();
+
+                if (dt.Rows.Count != 0)
+                {
+                    Show_Win(new Window1(dt.Rows[0][0].ToString()));
+                }
+                else
+                {
+                    image_login.Visibility = Visibility.Visible;
+                    image_login.ToolTip = "Неверный ввод";
+                    image_password.Visibility = Visibility.Visible;
+                    image_password.ToolTip = "Неверный ввод";
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ошибка!", "Ошибка!");
+                throw;
+            }
+
             var win = new MainWindow();
             win.Show();
             this.Close();
