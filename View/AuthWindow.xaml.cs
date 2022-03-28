@@ -82,11 +82,13 @@ namespace SpaceBaseApp
             }
 
 
-            string sql = String.Format("select логин from Аккаунты_диспетчер where логин collate Latin1_General_CS_AS like '{0}' and пароль collate Latin1_General_CS_AS like '{1}'", login, password);
+            string sql = String.Format("select Логин from Сотрудники " +
+                "                       where Логин collate Latin1_General_CS_AS like '{0}' " +
+                                       "and Пароль collate Latin1_General_CS_AS like '{1}'", login, password);
 
             SQL sqls = new SQL();
 
-            /*
+            
             try
             {
                 sqls.SQLConnect();
@@ -95,25 +97,25 @@ namespace SpaceBaseApp
 
                 if (dt.Rows.Count != 0)
                 {
-                    Show_Win(new Window1(dt.Rows[0][0].ToString()));
+                    //Show_Win(new Window1(dt.Rows[0][0].ToString()));
+                    var win = new MainWindow();
+                    win.Show();
+                    this.Close();
                 }
                 else
                 {
-                    image_login.Visibility = Visibility.Visible;
-                    image_login.ToolTip = "Неверный ввод";
-                    image_password.Visibility = Visibility.Visible;
-                    image_password.ToolTip = "Неверный ввод";
+                    //image_login.Visibility = Visibility.Visible;
+                    //image_login.ToolTip = "Неверный ввод";
+                    //image_password.Visibility = Visibility.Visible;
+                    //image_password.ToolTip = "Неверный ввод";
+                    MessageBox.Show("Неверный ввод");
                 }
             }
             catch (Exception)
             {
                 MessageBox.Show("Ошибка!", "Ошибка!");
                 throw;
-            }*/
-
-            var win = new MainWindow();
-            win.Show();
-            this.Close();
+            }
         }
 
         private void grdHeader_MouseDown(object sender, MouseButtonEventArgs e)

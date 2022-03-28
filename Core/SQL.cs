@@ -13,7 +13,7 @@ namespace SpaceBaseApp.Core
     class SQL
     {
 
-        private SqlConnection connect = new SqlConnection(@"data source=25.62.37.214\SqlExpress;initial catalog=SpaceBaseDB;user id=user;password=124279123;MultipleActiveResultSets=True;App=EntityFramework");
+        private SqlConnection connect = new SqlConnection(@"data source=25.68.7.66\SqlExpress;initial catalog=SpaceBaseDB;user id=user;password=124279123;MultipleActiveResultSets=True;App=EntityFramework");
 
         /*
          SqlConnection connect = new SqlConnection(@"data source=10.10.10.21\SqlExpress;initial catalog=taxi;user id=user;password=124279123;MultipleActiveResultSets=True;App=EntityFramework");
