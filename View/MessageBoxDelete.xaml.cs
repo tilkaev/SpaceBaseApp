@@ -28,36 +28,13 @@ namespace SpaceBaseApp.View
             timer.Interval = TimeSpan.FromMilliseconds(500);
             timer.Tick += timer_Tick;
             timer.Start();
-            TypewriteTextblock(txtText.Text, txtText, TimeSpan.FromMilliseconds(500));
+            FrameManager.TypewriteTextblock(txtText.Text, txtText, TimeSpan.FromMilliseconds(500));
         }
 
         void timer_Tick(object sender, EventArgs e)
         {
             btnCancel.Visibility = Visibility.Visible;
             btnOK.Visibility = Visibility.Visible;
-        }
-
-        private void TypewriteTextblock(string textToAnimate, TextBlock txt, TimeSpan timeSpan)
-        {
-            Storyboard story = new Storyboard();
-            story.FillBehavior = FillBehavior.HoldEnd;
-            DiscreteStringKeyFrame discreteStringKeyFrame;
-            StringAnimationUsingKeyFrames stringAnimationUsingKeyFrames = new StringAnimationUsingKeyFrames();
-            stringAnimationUsingKeyFrames.Duration = new Duration(timeSpan);
-
-            string tmp = string.Empty;
-            foreach (char c in textToAnimate)
-            {
-                discreteStringKeyFrame = new DiscreteStringKeyFrame();
-                discreteStringKeyFrame.KeyTime = KeyTime.Paced;
-                tmp += c;
-                discreteStringKeyFrame.Value = tmp;
-                stringAnimationUsingKeyFrames.KeyFrames.Add(discreteStringKeyFrame);
-            }
-            Storyboard.SetTargetName(stringAnimationUsingKeyFrames, txt.Name);
-            Storyboard.SetTargetProperty(stringAnimationUsingKeyFrames, new PropertyPath(TextBlock.TextProperty));
-            story.Children.Add(stringAnimationUsingKeyFrames);
-            story.Begin(txt);
         }
 
         private void btnCancel_MouseEnter(object sender, MouseEventArgs e)

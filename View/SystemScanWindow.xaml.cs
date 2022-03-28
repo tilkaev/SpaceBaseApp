@@ -22,6 +22,7 @@ namespace SpaceBaseApp
         public SystemScanWindow()
         {
             InitializeComponent();
+            FrameManager.TypewriteTextblock(txtSysCheck.Text, txtSysCheck, TimeSpan.FromSeconds(10));
         }
 
         private void btnBack_MouseEnter(object sender, MouseEventArgs e)

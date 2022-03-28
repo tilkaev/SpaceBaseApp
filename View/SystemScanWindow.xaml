@@ -22,8 +22,25 @@
                    Width="25" Margin="0 3 6 3" MouseDown="btnClose_MouseDown"></Image>
         </Grid>
         <Border BorderBrush="#05fb3b" BorderThickness="5" Grid.Row="1" Margin="10">
-            <Grid>
-                <Image Source="/Images/SystemCheck.png" Stretch="Fill"/>
+            <Grid Background="#000">
+                <TextBlock x:Name="txtSysCheck" Margin="10,0,0,11" Text="
+>SYSTEM CHECK... RUNNING&#10;
+&#10;
+OXYGEN                                              . . . . . . . . . : OK&#10;
+TEMPERATURE                                     . . . . . . . . . : OK&#10;
+BOILER                                                . . . . . . . . . : OK&#10;
+SERVER                                               . . . . . . . . . : OK&#10;
+WATER                                                . . . . . . . . . : OK&#10;
+COMMUNICATIONS                            . . . . . . . . . : OK&#10;
+AIR FILTRATION                                  . . . . . . . . . : OK&#10;
+SEWAGE/WASTE                                . . . . . . . . . : OK&#10;
+ELECTRICAL                                        . . . . . . . . . : OK&#10;
+                           &#10;
+ALL SYSTEMS FUNCTIONING NORMALLY!" Foreground="#05fb3b" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontFamily="/Fonts/#Handjet Square Double Medium" FontSize="23">
+                    <TextBlock.Effect>
+                        <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
+                    </TextBlock.Effect>
+                </TextBlock>
             </Grid>
         </Border>
         <Border x:Name="btnBack" Grid.Row="2" HorizontalAlignment="Left" Width="150" Height="40"
