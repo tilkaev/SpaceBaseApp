@@ -18,8 +18,8 @@
         </Grid.RowDefinitions>
         <Grid x:Name="grdHeader" Grid.ColumnSpan="2" Background="#05fb3b" MouseDown="grdHeader_MouseDown">
             <TextBlock Text="Authorization" FontSize="24" Foreground="#000"
-                       FontFamily="./Fonts/#Handjet Square Double Medium" Margin="15 5 0 0"></TextBlock>
-            <Image x:Name="btnClose" Source="Icons/closeicon.png" HorizontalAlignment="Right"
+                       FontFamily="/Fonts/#Handjet Square Double Medium" Margin="15 5 0 0"></TextBlock>
+            <Image x:Name="btnClose" Source="/Icons/closeicon.png" HorizontalAlignment="Right"
                    Width="25" Margin="0 3 6 3" MouseDown="btnClose_MouseDown"></Image>
         </Grid>
         <Border Background="#012a11" Grid.Row="1" CornerRadius="75" Margin="75 50 75 50">
@@ -27,7 +27,7 @@
                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                     <StackPanel Orientation="Horizontal" Margin="0 0 35 0">
                         <TextBlock x:Name="txtChoose2" Text=">>" Visibility="Hidden" Foreground="White" 
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" FontSize="32" Margin="0 3 10 0">
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" FontSize="32" Margin="0 3 10 0">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#00FF75"/>
                             </TextBlock.Effect>
@@ -51,7 +51,7 @@
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="0 0 35 0">
                         <TextBlock x:Name="txtChoose3" Text=">>" Visibility="Hidden" Foreground="White"
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" FontSize="32" Margin="0 13 10 0">
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" FontSize="32" Margin="0 13 10 0">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#00FF75"/>
                             </TextBlock.Effect>
@@ -75,7 +75,7 @@
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 0 40 0">
                         <TextBlock x:Name="txtChoose" Text=">>" Visibility="Hidden" Foreground="White"
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" FontSize="32" Margin="0 -3 10 0">
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" FontSize="32" Margin="0 -3 10 0">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#00FF75"/>
                             </TextBlock.Effect>
