@@ -29,6 +29,8 @@ namespace SpaceBaseApp
             txtIpconfig.Text += "не правильный пароль";
         }
 
+
+        #region EVENTERS
         private void btnLogin_MouseEnter(object sender, MouseEventArgs e)
         {
             txtChoose.Visibility = Visibility.Visible;
@@ -58,11 +60,13 @@ namespace SpaceBaseApp
         {
             txtChoose3.Visibility = Visibility.Hidden;
         }
+        #endregion
 
-        //////////////////////////////////////////////////////////////
+
 
         private void btnLogin_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) //кнопка логин
         {
+
             string login = tbLogin.Text;
             string password = pbPassword.Password;
 
@@ -116,6 +120,8 @@ namespace SpaceBaseApp
             }
         }
 
+
+        #region WINDOW TITLE
         private void grdHeader_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
@@ -131,5 +137,9 @@ namespace SpaceBaseApp
                 this.Close();
             }
         }
+        #endregion
+
+
+
     }
 }
