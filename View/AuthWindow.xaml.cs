@@ -75,14 +75,8 @@ namespace SpaceBaseApp
             
             if (login is "" & password is "")
             {
-                //image_password.ToolTip = "Пустые поля";
-                //image_login.ToolTip = "Пустые поля";
+                FrameManager.TypewriteTextblock("Empty fields", txtError, TimeSpan.FromSeconds(0.5));
                 return;
-            }
-            else
-            {
-                //image_login.Visibility = Visibility.Collapsed;
-                //image_password.Visibility = Visibility.Collapsed;
             }
 
 
@@ -108,11 +102,7 @@ namespace SpaceBaseApp
                 }
                 else
                 {
-                    //image_login.Visibility = Visibility.Visible;
-                    //image_login.ToolTip = "Неверный ввод";
-                    //image_password.Visibility = Visibility.Visible;
-                    //image_password.ToolTip = "Неверный ввод";
-                    MessageBox.Show("Неверный ввод");
+                    FrameManager.TypewriteTextblock("Invalid login or password", txtError, TimeSpan.FromSeconds(0.5));
                 }
             }
             catch (Exception)
