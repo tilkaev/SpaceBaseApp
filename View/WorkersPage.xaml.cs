@@ -1,5 +1,7 @@
-﻿using System;
+﻿using SpaceBaseApp.Core;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +22,32 @@ namespace SpaceBaseApp
     /// </summary>
     public partial class WorkersPage : Page
     {
+
+        DataTable newDataTable;
+        DataTable dataTable;
         public WorkersPage()
         {
             InitializeComponent();
+            string sql = String.Format("select * from Сотрудники");
+            SQL sqls = new SQL();
+
+
+            try
+            {
+                sqls.SQLConnect();
+                newDataTable = sqls.Inquiry(sql); // Выполняем запрос, возвращаем результат в виде DataTable
+                dataTable = newDataTable.Copy();
+                sqls.Close();
+
+                mainDataGrid.ItemsSource = dataTable.AsDataView();
+
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ошибка!", "Ошибка!");
+                throw;
+            }
         }
 
         private void btnAdd_MouseEnter(object sender, MouseEventArgs e)
@@ -59,6 +84,49 @@ namespace SpaceBaseApp
         private void btnDelete_MouseDown(object sender, MouseButtonEventArgs e) // кнопка Delete
         {
 
+        }
+
+        private void Find(string str = "")
+        {
+            if (str != "")
+            {
+                str = tbSearch.Text.ToLower();
+            }
+
+            int num_column = dataTable.Columns.Count;
+            dataTable = newDataTable.Copy();
+
+
+            if (str != "")
+            {
+                foreach (DataRow item in dataTable.Rows) // Модуль активного поиска
+                {
+                    int skip_del = 0;
+
+                    for (int i = 0; i < num_column; i++) // Проход по строкам
+                    {
+                        bool booling = item[i].ToString().ToLower().Contains(str); //str.IndexOf()
+                        if (booling)
+                        {
+                            skip_del = 1;
+                            break;
+                        }
+                        skip_del++;
+                    }
+                    if (skip_del == num_column)
+                    {
+                        item.Delete();
+                    }
+                }
+                dataTable.AcceptChanges();
+            }
+
+            mainDataGrid.ItemsSource = dataTable.AsDataView();
+        }
+
+        private void tbSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Find(tbSearch.Text);
         }
     }
 }

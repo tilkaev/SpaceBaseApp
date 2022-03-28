@@ -29,7 +29,7 @@
                    Width="25" Margin="0 3 6 3" MouseDown="btnClose_MouseDown"></Image>
         </Grid>
         <StackPanel HorizontalAlignment="Center" Grid.Row="1" Margin="0 25 0 0">
-            <TextBlock Text="Categories/Functions" FontSize="24" Foreground="#05fb3b"
+            <TextBlock Text="Categories/ Functions" FontSize="24" Foreground="#05fb3b"
                        FontFamily="/Fonts/#Handjet Square Double Medium" HorizontalAlignment="Center">
                 <TextBlock.Effect>
                     <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>

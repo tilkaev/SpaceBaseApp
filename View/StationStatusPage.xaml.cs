@@ -203,7 +203,7 @@ namespace SpaceBaseApp
         private void btnSystemScan_MouseDown(object sender, MouseButtonEventArgs e)// кнопка SystemScan
         {
             var win = new SystemScanWindow();
-            win.Show();
+            win.ShowDialog();
         }
 
 
