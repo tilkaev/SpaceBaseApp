@@ -114,7 +114,7 @@
         <Border Background="#005738" BorderThickness="5" BorderBrush="#05fb3b" Width="700" Height="50" 
                 VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20 10 0 0">
             <TextBlock Text="Apartments of Main Deck" FontSize="24" Foreground="#05fb3b" 
-                       FontFamily="./Fonts/#Handjet Square Double Medium" VerticalAlignment="Center" Margin="10 0 0 0">
+                       FontFamily="/Fonts/#Handjet Square Double Medium" VerticalAlignment="Center" Margin="10 0 0 0">
                 <TextBlock.Effect>
                     <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                 </TextBlock.Effect>
@@ -127,19 +127,19 @@
                         BorderThickness="3" Width="100" Height="100" Opacity="0.5">
                     <StackPanel>
                         <TextBlock Text="A1" TextAlignment="Center" FontSize="24" Foreground="#05fb3b" 
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                             </TextBlock.Effect>
                         </TextBlock>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 0">
                             <TextBlock Text="1" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                       FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
+                                       FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
                                 <TextBlock.Effect>
                                     <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                                 </TextBlock.Effect>
                             </TextBlock>
-                            <Image Source="Icons/person.png" Width="20"></Image>
+                            <Image Source="//Icons/person.png" Width="20"></Image>
                         </StackPanel>
                     </StackPanel>
                 </Border>
@@ -147,19 +147,19 @@
                         BorderThickness="3" Width="100" Height="100" Margin="20 0 0 0">
                     <StackPanel>
                         <TextBlock Text="A2" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                             </TextBlock.Effect>
                         </TextBlock>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 0">
                             <TextBlock Text="1" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                       FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
+                                       FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
                                 <TextBlock.Effect>
                                     <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                                 </TextBlock.Effect>
                             </TextBlock>
-                            <Image Source="Icons/person.png" Width="20"></Image>
+                            <Image Source="//Icons/person.png" Width="20"></Image>
                         </StackPanel>
                     </StackPanel>
                 </Border>
@@ -167,19 +167,19 @@
                         Width="100" Height="100" Margin="20 0 0 0" Opacity="0.5">
                     <StackPanel>
                         <TextBlock Text="A3" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                             </TextBlock.Effect>
                         </TextBlock>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 0">
                             <TextBlock Text="1" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                       FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
+                                       FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
                                 <TextBlock.Effect>
                                     <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                                 </TextBlock.Effect>
                             </TextBlock>
-                            <Image Source="Icons/person.png" Width="20"></Image>
+                            <Image Source="/Icons/person.png" Width="20"></Image>
                         </StackPanel>
                     </StackPanel>
                 </Border>
@@ -187,19 +187,19 @@
                         Width="100" Height="100" Margin="20 0 0 0">
                     <StackPanel>
                         <TextBlock Text="A4" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                             </TextBlock.Effect>
                         </TextBlock>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 0">
                             <TextBlock Text="1" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                       FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
+                                       FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
                                 <TextBlock.Effect>
                                     <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                                 </TextBlock.Effect>
                             </TextBlock>
-                            <Image Source="Icons/person.png" Width="20"></Image>
+                            <Image Source="/Icons/person.png" Width="20"></Image>
                         </StackPanel>
                     </StackPanel>
                 </Border>
@@ -207,19 +207,19 @@
                         Width="100" Height="100" Margin="20 0 0 0">
                     <StackPanel>
                         <TextBlock Text="A5" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                             </TextBlock.Effect>
                         </TextBlock>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 0">
                             <TextBlock Text="1" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                       FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
+                                       FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
                                 <TextBlock.Effect>
                                     <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                                 </TextBlock.Effect>
                             </TextBlock>
-                            <Image Source="Icons/person.png" Width="20"></Image>
+                            <Image Source="/Icons/person.png" Width="20"></Image>
                         </StackPanel>
                     </StackPanel>
                 </Border>
@@ -227,19 +227,19 @@
                         Width="100" Height="100" Margin="20 0 0 0">
                     <StackPanel>
                         <TextBlock Text="A6" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                             </TextBlock.Effect>
                         </TextBlock>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 0">
                             <TextBlock Text="1" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                       FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
+                                       FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
                                 <TextBlock.Effect>
                                     <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                                 </TextBlock.Effect>
                             </TextBlock>
-                            <Image Source="Icons/person.png" Width="20"></Image>
+                            <Image Source="/Icons/person.png" Width="20"></Image>
                         </StackPanel>
                     </StackPanel>
                 </Border>
@@ -250,19 +250,19 @@
                         Width="100" Height="100">
                     <StackPanel>
                         <TextBlock Text="B1" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                             </TextBlock.Effect>
                         </TextBlock>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 0">
                             <TextBlock Text="2" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                       FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
+                                       FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
                                 <TextBlock.Effect>
                                     <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                                 </TextBlock.Effect>
                             </TextBlock>
-                            <Image Source="Icons/person.png" Width="20"></Image>
+                            <Image Source="/Icons/person.png" Width="20"></Image>
                         </StackPanel>
                     </StackPanel>
                 </Border>
@@ -270,19 +270,19 @@
                         Width="100" Height="100" Margin="20 0 0 0">
                     <StackPanel>
                         <TextBlock Text="B2" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                             </TextBlock.Effect>
                         </TextBlock>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 0">
                             <TextBlock Text="2" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                       FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
+                                       FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
                                 <TextBlock.Effect>
                                     <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                                 </TextBlock.Effect>
                             </TextBlock>
-                            <Image Source="Icons/person.png" Width="20"></Image>
+                            <Image Source="/Icons/person.png" Width="20"></Image>
                         </StackPanel>
                     </StackPanel>
                 </Border>
@@ -290,19 +290,19 @@
                         Width="100" Height="100" Margin="20 0 0 0" Opacity="0.5">
                     <StackPanel>
                         <TextBlock Text="B3" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                             </TextBlock.Effect>
                         </TextBlock>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 0">
                             <TextBlock Text="2" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                       FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
+                                       FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
                                 <TextBlock.Effect>
                                     <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                                 </TextBlock.Effect>
                             </TextBlock>
-                            <Image Source="Icons/person.png" Width="20"></Image>
+                            <Image Source="/Icons/person.png" Width="20"></Image>
                         </StackPanel>
                     </StackPanel>
                 </Border>
@@ -310,19 +310,19 @@
                         Width="100" Height="100" Margin="20 0 0 0">
                     <StackPanel>
                         <TextBlock Text="B4" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                             </TextBlock.Effect>
                         </TextBlock>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 0">
                             <TextBlock Text="3" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                       FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
+                                       FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
                                 <TextBlock.Effect>
                                     <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                                 </TextBlock.Effect>
                             </TextBlock>
-                            <Image Source="Icons/person.png" Width="20"></Image>
+                            <Image Source="/Icons/person.png" Width="20"></Image>
                         </StackPanel>
                     </StackPanel>
                 </Border>
@@ -330,19 +330,19 @@
                         Width="100" Height="100" Margin="20 0 0 0">
                     <StackPanel>
                         <TextBlock Text="B5" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                             </TextBlock.Effect>
                         </TextBlock>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 0">
                             <TextBlock Text="3" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                       FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
+                                       FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
                                 <TextBlock.Effect>
                                     <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                                 </TextBlock.Effect>
                             </TextBlock>
-                            <Image Source="Icons/person.png" Width="20"></Image>
+                            <Image Source="/Icons/person.png" Width="20"></Image>
                         </StackPanel>
                     </StackPanel>
                 </Border>
@@ -350,19 +350,19 @@
                         Width="100" Height="100" Margin="20 0 0 0">
                     <StackPanel>
                         <TextBlock Text="B6" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                             </TextBlock.Effect>
                         </TextBlock>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 0">
                             <TextBlock Text="3" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                       FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
+                                       FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
                                 <TextBlock.Effect>
                                     <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                                 </TextBlock.Effect>
                             </TextBlock>
-                            <Image Source="Icons/person.png" Width="20"></Image>
+                            <Image Source="/Icons/person.png" Width="20"></Image>
                         </StackPanel>
                     </StackPanel>
                 </Border>
@@ -372,7 +372,7 @@
         <Border Grid.Row="2" Background="#005738" BorderThickness="5" BorderBrush="#05fb3b"
                 Width="700" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20 10 0 0">
             <TextBlock Text="Apartments of Lower Deck" FontSize="24" Foreground="#05fb3b"
-                       FontFamily="./Fonts/#Handjet Square Double Medium" VerticalAlignment="Center" Margin="10 0 0 0">
+                       FontFamily="/Fonts/#Handjet Square Double Medium" VerticalAlignment="Center" Margin="10 0 0 0">
                 <TextBlock.Effect>
                     <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                 </TextBlock.Effect>
@@ -385,19 +385,19 @@
                         Width="100" Height="100" Opacity="0.5">
                     <StackPanel>
                         <TextBlock Text="C1" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                             </TextBlock.Effect>
                         </TextBlock>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 0">
                             <TextBlock Text="1" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                       FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
+                                       FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
                                 <TextBlock.Effect>
                                     <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                                 </TextBlock.Effect>
                             </TextBlock>
-                            <Image Source="Icons/person.png" Width="20"></Image>
+                            <Image Source="/Icons/person.png" Width="20"></Image>
                         </StackPanel>
                     </StackPanel>
                 </Border>
@@ -405,19 +405,19 @@
                         Width="100" Height="100" Margin="20 0 0 0" Opacity="0.5">
                     <StackPanel>
                         <TextBlock Text="C2" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                             </TextBlock.Effect>
                         </TextBlock>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 0">
                             <TextBlock Text="1" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                       FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
+                                       FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
                                 <TextBlock.Effect>
                                     <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                                 </TextBlock.Effect>
                             </TextBlock>
-                            <Image Source="Icons/person.png" Width="20"></Image>
+                            <Image Source="/Icons/person.png" Width="20"></Image>
                         </StackPanel>
                     </StackPanel>
                 </Border>
@@ -425,19 +425,19 @@
                         Width="100" Height="100" Margin="20 0 0 0">
                     <StackPanel>
                         <TextBlock Text="C3" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                             </TextBlock.Effect>
                         </TextBlock>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 0">
                             <TextBlock Text="1" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                       FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
+                                       FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
                                 <TextBlock.Effect>
                                     <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                                 </TextBlock.Effect>
                             </TextBlock>
-                            <Image Source="Icons/person.png" Width="20"></Image>
+                            <Image Source="/Icons/person.png" Width="20"></Image>
                         </StackPanel>
                     </StackPanel>
                 </Border>
@@ -445,19 +445,19 @@
                         Width="100" Height="100" Margin="20 0 0 0">
                     <StackPanel>
                         <TextBlock Text="C4" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                             </TextBlock.Effect>
                         </TextBlock>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 0">
                             <TextBlock Text="1" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                       FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
+                                       FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
                                 <TextBlock.Effect>
                                     <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                                 </TextBlock.Effect>
                             </TextBlock>
-                            <Image Source="Icons/person.png" Width="20"></Image>
+                            <Image Source="/Icons/person.png" Width="20"></Image>
                         </StackPanel>
                     </StackPanel>
                 </Border>
@@ -465,19 +465,19 @@
                         Width="100" Height="100" Margin="20 0 0 0">
                     <StackPanel>
                         <TextBlock Text="C5" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                             </TextBlock.Effect>
                         </TextBlock>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 0">
                             <TextBlock Text="1" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                       FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
+                                       FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
                                 <TextBlock.Effect>
                                     <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                                 </TextBlock.Effect>
                             </TextBlock>
-                            <Image Source="Icons/person.png" Width="20"></Image>
+                            <Image Source="/Icons/person.png" Width="20"></Image>
                         </StackPanel>
                     </StackPanel>
                 </Border>
@@ -485,19 +485,19 @@
                         Width="100" Height="100" Margin="20 0 0 0">
                     <StackPanel>
                         <TextBlock Text="C6" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                             </TextBlock.Effect>
                         </TextBlock>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 0">
                             <TextBlock Text="1" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                       FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
+                                       FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
                                 <TextBlock.Effect>
                                     <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                                 </TextBlock.Effect>
                             </TextBlock>
-                            <Image Source="Icons/person.png" Width="20"></Image>
+                            <Image Source="/Icons/person.png" Width="20"></Image>
                         </StackPanel>
                     </StackPanel>
                 </Border>
@@ -508,19 +508,19 @@
                         Width="100" Height="100" Opacity="0.5">
                     <StackPanel>
                         <TextBlock Text="D1" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                             </TextBlock.Effect>
                         </TextBlock>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 0">
                             <TextBlock Text="2" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                       FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
+                                       FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
                                 <TextBlock.Effect>
                                     <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                                 </TextBlock.Effect>
                             </TextBlock>
-                            <Image Source="Icons/person.png" Width="20"></Image>
+                            <Image Source="/Icons/person.png" Width="20"></Image>
                         </StackPanel>
                     </StackPanel>
                 </Border>
@@ -528,19 +528,19 @@
                         Width="100" Height="100" Margin="20 0 0 0">
                     <StackPanel>
                         <TextBlock Text="D2" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                             </TextBlock.Effect>
                         </TextBlock>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 0">
                             <TextBlock Text="2" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                       FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
+                                       FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
                                 <TextBlock.Effect>
                                     <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                                 </TextBlock.Effect>
                             </TextBlock>
-                            <Image Source="Icons/person.png" Width="20"></Image>
+                            <Image Source="/Icons/person.png" Width="20"></Image>
                         </StackPanel>
                     </StackPanel>
                 </Border>
@@ -548,19 +548,19 @@
                         Width="100" Height="100" Margin="20 0 0 0" Opacity="0.5">
                     <StackPanel>
                         <TextBlock Text="D3" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                             </TextBlock.Effect>
                         </TextBlock>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 0">
                             <TextBlock Text="2" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                       FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
+                                       FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
                                 <TextBlock.Effect>
                                     <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                                 </TextBlock.Effect>
                             </TextBlock>
-                            <Image Source="Icons/person.png" Width="20"></Image>
+                            <Image Source="/Icons/person.png" Width="20"></Image>
                         </StackPanel>
                     </StackPanel>
                 </Border>
@@ -568,19 +568,19 @@
                         Width="100" Height="100" Margin="20 0 0 0">
                     <StackPanel>
                         <TextBlock Text="D4" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                             </TextBlock.Effect>
                         </TextBlock>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 0">
                             <TextBlock Text="2" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                       FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
+                                       FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
                                 <TextBlock.Effect>
                                     <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                                 </TextBlock.Effect>
                             </TextBlock>
-                            <Image Source="Icons/person.png" Width="20"></Image>
+                            <Image Source="/Icons/person.png" Width="20"></Image>
                         </StackPanel>
                     </StackPanel>
                 </Border>
@@ -588,19 +588,19 @@
                         Width="100" Height="100" Margin="20 0 0 0">
                     <StackPanel>
                         <TextBlock Text="D5" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                             </TextBlock.Effect>
                         </TextBlock>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 0">
                             <TextBlock Text="3" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                       FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
+                                       FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
                                 <TextBlock.Effect>
                                     <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                                 </TextBlock.Effect>
                             </TextBlock>
-                            <Image Source="Icons/person.png" Width="20"></Image>
+                            <Image Source="/Icons/person.png" Width="20"></Image>
                         </StackPanel>
                     </StackPanel>
                 </Border>
@@ -608,19 +608,19 @@
                         Width="100" Height="100" Margin="20 0 0 0" Opacity="0.5">
                     <StackPanel>
                         <TextBlock Text="D6" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                             </TextBlock.Effect>
                         </TextBlock>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 0">
                             <TextBlock Text="3" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                       FontFamily="./Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
+                                       FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
                                 <TextBlock.Effect>
                                     <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                                 </TextBlock.Effect>
                             </TextBlock>
-                            <Image Source="Icons/person.png" Width="20"></Image>
+                            <Image Source="/Icons/person.png" Width="20"></Image>
                         </StackPanel>
                     </StackPanel>
                 </Border>
@@ -630,7 +630,7 @@
         <StackPanel Grid.Column="1" Grid.RowSpan="4" VerticalAlignment="Center" HorizontalAlignment="Right">
             <Border Background="#005738" BorderThickness="5 5 5 0" BorderBrush="#05fb3b" Width="225" Height="50">
                 <TextBlock Text="Filter" FontSize="24" Foreground="#05fb3b"
-                           FontFamily="./Fonts/#Handjet Square Double Medium" VerticalAlignment="Center" Margin="10 0 0 0">
+                           FontFamily="/Fonts/#Handjet Square Double Medium" VerticalAlignment="Center" Margin="10 0 0 0">
                     <TextBlock.Effect>
                         <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                     </TextBlock.Effect>
@@ -646,7 +646,7 @@
                             </CheckBox.Effect>
                         </CheckBox>
                         <TextBlock Text="In need of repair" FontSize="24" Foreground="#05fb3b"
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" Margin="15 0 0 0">
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" Margin="15 0 0 0">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                             </TextBlock.Effect>
@@ -660,7 +660,7 @@
                             </CheckBox.Effect>
                         </CheckBox>
                         <TextBlock Text="Not free" FontSize="24" Foreground="#05fb3b"
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" Margin="15 0 0 0">
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" Margin="15 0 0 0">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                             </TextBlock.Effect>
@@ -674,7 +674,7 @@
                             </CheckBox.Effect>
                         </CheckBox>
                         <TextBlock Text="Free" FontSize="24" Foreground="#05fb3b"
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" Margin="15 0 0 0">
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" Margin="15 0 0 0">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                             </TextBlock.Effect>

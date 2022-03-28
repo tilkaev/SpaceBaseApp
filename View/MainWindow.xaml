@@ -21,16 +21,16 @@
         </Grid.RowDefinitions>
         <Grid x:Name="grdHeader" Grid.ColumnSpan="2" Background="#05fb3b" MouseDown="grdHeader_MouseDown">
             <TextBlock Text="Personal terminal" FontSize="24" Foreground="#000"
-                       FontFamily="./Fonts/#Handjet Square Double Medium" Margin="15 5 0 0"></TextBlock>
+                       FontFamily="/Fonts/#Handjet Square Double Medium" Margin="15 5 0 0"></TextBlock>
             <Border x:Name="btnMinimize" Width="25" Height="25" Background="#037a51" Margin="0 3 40 3" HorizontalAlignment="Right" MouseDown="btnMinimize_MouseDown">
                 <Rectangle Width="19" Height="3" Fill="Black" Margin="0 12 0 0"></Rectangle>
             </Border>
-            <Image x:Name="btnClose" Source="Icons/closeicon.png" HorizontalAlignment="Right"
+            <Image x:Name="btnClose" Source="/Icons/closeicon.png" HorizontalAlignment="Right"
                    Width="25" Margin="0 3 6 3" MouseDown="btnClose_MouseDown"></Image>
         </Grid>
         <StackPanel HorizontalAlignment="Center" Grid.Row="1" Margin="0 25 0 0">
             <TextBlock Text="Categories/Functions" FontSize="24" Foreground="#05fb3b"
-                       FontFamily="./Fonts/#Handjet Square Double Medium" HorizontalAlignment="Center">
+                       FontFamily="/Fonts/#Handjet Square Double Medium" HorizontalAlignment="Center">
                 <TextBlock.Effect>
                     <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                 </TextBlock.Effect>
@@ -38,7 +38,7 @@
             <Border x:Name="btnStationStatus" Width="222" Height="128" BorderBrush="#05fb3b" BorderThickness="5"
                     CornerRadius="5" Margin="0 10 0 0" MouseDown="btnStationStatus_MouseDown"
                     MouseEnter="btnStationStatus_MouseEnter" MouseLeave="btnStationStatus_MouseLeave">
-                <TextBlock Text="Station&#10;Status" TextAlignment="Center" FontSize="24" Foreground="#05fb3b" FontFamily="./Fonts/#Handjet Square Double Medium" VerticalAlignment="Center">
+                <TextBlock Text="Station&#10;Status" TextAlignment="Center" FontSize="24" Foreground="#05fb3b" FontFamily="/Fonts/#Handjet Square Double Medium" VerticalAlignment="Center">
                     <TextBlock.Effect>
                         <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                     </TextBlock.Effect>
@@ -47,7 +47,7 @@
             <Border x:Name="btnGuests" Width="222" Height="128" BorderBrush="#05fb3b" BorderThickness="5"
                     CornerRadius="5" Margin="0 28 0 0" MouseEnter="btnGuests_MouseEnter"
                     MouseLeave="btnGuests_MouseLeave" MouseDown="btnGuests_MouseDown">
-                <TextBlock Text="Guests" TextAlignment="Center" FontSize="24" Foreground="#05fb3b" FontFamily="./Fonts/#Handjet Square Double Medium" VerticalAlignment="Center">
+                <TextBlock Text="Guests" TextAlignment="Center" FontSize="24" Foreground="#05fb3b" FontFamily="/Fonts/#Handjet Square Double Medium" VerticalAlignment="Center">
                     <TextBlock.Effect>
                         <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                     </TextBlock.Effect>
@@ -56,7 +56,7 @@
             <Border x:Name="btnWorkers" Width="222" Height="128" BorderBrush="#05fb3b" BorderThickness="5"
                     CornerRadius="5" Margin="0 28 0 0" MouseEnter="btnWorkers_MouseEnter"
                     MouseLeave="btnWorkers_MouseLeave" MouseDown="btnWorkers_MouseDown">
-                <TextBlock Text="Workers" TextAlignment="Center" FontSize="24" Foreground="#05fb3b" FontFamily="./Fonts/#Handjet Square Double Medium" VerticalAlignment="Center">
+                <TextBlock Text="Workers" TextAlignment="Center" FontSize="24" Foreground="#05fb3b" FontFamily="/Fonts/#Handjet Square Double Medium" VerticalAlignment="Center">
                     <TextBlock.Effect>
                         <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                     </TextBlock.Effect>
@@ -65,7 +65,7 @@
             <Border x:Name="btnApartments" Width="222" Height="128" BorderBrush="#05fb3b" BorderThickness="5"
                     CornerRadius="5" Margin="0 28 0 0" MouseEnter="btnApartments_MouseEnter"
                     MouseLeave="btnApartments_MouseLeave" MouseDown="btnApartments_MouseDown">
-                <TextBlock Text="Apartments" TextAlignment="Center" FontSize="24" Foreground="#05fb3b" FontFamily="./Fonts/#Handjet Square Double Medium" VerticalAlignment="Center">
+                <TextBlock Text="Apartments" TextAlignment="Center" FontSize="24" Foreground="#05fb3b" FontFamily="/Fonts/#Handjet Square Double Medium" VerticalAlignment="Center">
                     <TextBlock.Effect>
                         <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                     </TextBlock.Effect>

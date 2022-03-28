@@ -22,13 +22,13 @@
         </Grid.ColumnDefinitions>
         <Grid x:Name="grdHeader" Grid.ColumnSpan="3" Background="#05fb3b" MouseDown="grdHeader_MouseDown">
             <TextBlock Text="Select camera" FontSize="24" Foreground="#000"
-                       FontFamily="./Fonts/#Handjet Square Double Medium" Margin="15 5 0 0"></TextBlock>
-            <Image x:Name="btnClose" Source="Icons/closeicon.png" HorizontalAlignment="Right"
+                       FontFamily="/Fonts/#Handjet Square Double Medium" Margin="15 5 0 0"></TextBlock>
+            <Image x:Name="btnClose" Source="/Icons/closeicon.png" HorizontalAlignment="Right"
                    Width="25" Margin="0 3 6 3" MouseDown="btnClose_MouseDown"></Image>
         </Grid>
         <Border x:Name="btnPrevious" Grid.Row="1" Background="#005738" BorderBrush="#05fb3b" 
                         BorderThickness="5" Width="50" Height="50" MouseEnter="btnPrevious_MouseEnter" MouseLeave="btnPrevious_MouseLeave" MouseDown="btnPrevious_MouseDown">
-            <TextBlock Text="&lt;&lt;" FontSize="24" TextAlignment="Center" Foreground="#05fb3b" FontFamily="./Fonts/#Handjet Square Double Medium" VerticalAlignment="Center">
+            <TextBlock Text="&lt;&lt;" FontSize="24" TextAlignment="Center" Foreground="#05fb3b" FontFamily="/Fonts/#Handjet Square Double Medium" VerticalAlignment="Center">
                 <TextBlock.Effect>
                     <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                 </TextBlock.Effect>
@@ -38,7 +38,7 @@
         
         <Border x:Name="btnNext" Grid.Row="1" Grid.Column="2" Background="#005738" BorderBrush="#05fb3b" 
                         BorderThickness="5" Width="50" Height="50" MouseEnter="btnNext_MouseEnter" MouseLeave="btnNext_MouseLeave" MouseDown="btnNext_MouseDown">
-            <TextBlock Text=">>" FontSize="24" TextAlignment="Center" Foreground="#05fb3b" FontFamily="./Fonts/#Handjet Square Double Medium" VerticalAlignment="Center">
+            <TextBlock Text=">>" FontSize="24" TextAlignment="Center" Foreground="#05fb3b" FontFamily="/Fonts/#Handjet Square Double Medium" VerticalAlignment="Center">
                 <TextBlock.Effect>
                     <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                 </TextBlock.Effect>
@@ -47,7 +47,7 @@
         <Border x:Name="btnBack" Grid.ColumnSpan="2" Grid.Row="2" HorizontalAlignment="Left" Width="150" Height="40"
                 BorderBrush="#05fb3b" BorderThickness="5" Margin="10 0 0 0" MouseDown="btnBack_MouseDown"
                 MouseEnter="btnBack_MouseEnter" MouseLeave="btnBack_MouseLeave">
-            <TextBlock Text="Back" FontSize="24" TextAlignment="Center" Foreground="#05fb3b" FontFamily="./Fonts/#Handjet Square Double Medium" VerticalAlignment="Center">
+            <TextBlock Text="Back" FontSize="24" TextAlignment="Center" Foreground="#05fb3b" FontFamily="/Fonts/#Handjet Square Double Medium" VerticalAlignment="Center">
                 <TextBlock.Effect>
                     <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                 </TextBlock.Effect>
