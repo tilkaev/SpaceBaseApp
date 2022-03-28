@@ -33,7 +33,7 @@
                             </TextBlock.Effect>
                         </TextBlock>
                         <TextBox x:Name="tbLogin" Width="250" Height="40" CaretBrush="#fff" SelectionBrush="#fff" Foreground="#fff" 
-                                 BorderBrush="#fff" materialDesign:HintAssist.Hint="Login" FontFamily="./Fonts/#Handjet Square Double Medium"
+                                 BorderBrush="#fff" materialDesign:HintAssist.Hint="Login" FontFamily="/Fonts/#Handjet Square Double Medium"
                                  FontSize="28" GotFocus="tbLogin_GotFocus" LostFocus="tbLogin_LostFocus">
                             <TextBox.Resources>
                                 <ResourceDictionary>
@@ -57,7 +57,7 @@
                             </TextBlock.Effect>
                         </TextBlock>
                         <PasswordBox x:Name="pbPassword" Width="250" Height="40" CaretBrush="#fff" SelectionBrush="#fff" Foreground="#fff"
-                                     BorderBrush="#fff" materialDesign:HintAssist.Hint="Password" FontFamily="./Fonts/#Handjet Square Double Medium"
+                                     BorderBrush="#fff" materialDesign:HintAssist.Hint="Password" FontFamily="/Fonts/#Handjet Square Double Medium"
                                      FontSize="28" Margin="0 10 0 25" PasswordChar="*" GotFocus="pbPassword_GotFocus" LostFocus="pbPassword_LostFocus">
                             <PasswordBox.Resources>
                                 <ResourceDictionary>
@@ -81,7 +81,7 @@
                             </TextBlock.Effect>
                         </TextBlock>
                         <TextBlock x:Name="btnLogin" Text="Log In" Foreground="White" 
-                                   FontFamily="./Fonts/#Handjet Square Double Medium" FontSize="28" 
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" FontSize="28" 
                                    MouseEnter="btnLogin_MouseEnter" MouseLeave="btnLogin_MouseLeave" 
                                    MouseLeftButtonDown="btnLogin_MouseLeftButtonDown">
                             <TextBlock.Effect>
@@ -99,7 +99,7 @@ Local IPv6-address channel . : fe80::f48c:a7ed:c6a9:5140%12&#10;
 IPv4-address. . . . . . . . : 192.168.3.120&#10;
 SubNEt Mask . . . . . . . . : 255.255.252.0&#10;
 Main socket. . . . . . . . : 192.168.0.3&#10;
-C:\Users\Programmer>" Foreground="#fff" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontFamily="./Fonts/#Handjet Square Double Medium" Opacity="0.7" FontSize="18" Grid.Row="1">
+C:\Users\Programmer>" Foreground="#fff" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontFamily="/Fonts/#Handjet Square Double Medium" Opacity="0.7" FontSize="18" Grid.Row="1">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#00FF75" Opacity="0.35"/>
             </Label.Effect>
