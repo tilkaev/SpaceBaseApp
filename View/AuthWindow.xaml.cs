@@ -84,6 +84,7 @@ namespace SpaceBaseApp
 
             SQL sqls = new SQL();
 
+            /*
             try
             {
                 sqls.SQLConnect();
@@ -106,7 +107,7 @@ namespace SpaceBaseApp
             {
                 MessageBox.Show("Ошибка!", "Ошибка!");
                 throw;
-            }
+            }*/
 
             var win = new MainWindow();
             win.Show();
