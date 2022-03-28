@@ -25,7 +25,9 @@ namespace SpaceBaseApp
         public AuthWindow()
         {
             InitializeComponent();
-            FrameManager.TypewriteTextblock(txtIpconfig.Text, txtIpconfig, TimeSpan.FromSeconds(10));          
+            FrameManager.TypewriteTextblock(txtIpconfig.Text, txtIpconfig, TimeSpan.FromSeconds(10));
+            tbLogin.Text = "ybor";
+            pbPassword.Password = "ybor";
         }
 
 
@@ -63,16 +65,30 @@ namespace SpaceBaseApp
 
 
 
+
+        public void Show_Win(Window win, double x = 0, double y = 0) // Создание окна закрытие старого
+        {
+            //win.Owner = this;
+            //win.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+
+            this.Visibility = Visibility.Collapsed;
+
+            win.Closed += (sender2, e2) =>
+            {
+                tbLogin.Text = "";
+                pbPassword.Password = "";
+                this.Visibility = Visibility.Visible;
+            };
+            win.ShowDialog();
+        }
+
         private void btnLogin_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) //кнопка логин
         {
 
             string login = tbLogin.Text;
             string password = pbPassword.Password;
 
-            
 
-           
-            
             if (login is "" & password is "")
             {
                 FrameManager.TypewriteTextblock("Empty fields", txtError, TimeSpan.FromSeconds(0.5));
@@ -81,7 +97,7 @@ namespace SpaceBaseApp
 
 
             string sql = String.Format("select Логин from Сотрудники " +
-                "                       where Логин collate Latin1_General_CS_AS like '{0}' " +
+                                        "where Логин collate Latin1_General_CS_AS like '{0}' " +
                                        "and Пароль collate Latin1_General_CS_AS like '{1}'", login, password);
 
             SQL sqls = new SQL();
@@ -95,10 +111,17 @@ namespace SpaceBaseApp
 
                 if (dt.Rows.Count != 0)
                 {
-                    //Show_Win(new Window1(dt.Rows[0][0].ToString()));
+                    
                     var win = new MainWindow();
-                    win.Show();
-                    this.Close();
+                    FrameManager.AnimationWindow(win); 
+                    FrameManager.AnimationWindow(this, false);
+                    win.Closed += (sender2, e2) =>
+                    {
+                        this.Opacity = 0;
+                        tbLogin.Text = "";
+                        pbPassword.Password = "";
+                        FrameManager.AnimationWindow(this);
+                    };
                 }
                 else
                 {

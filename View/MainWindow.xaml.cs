@@ -81,10 +81,12 @@ namespace SpaceBaseApp
             }
         }
 
-        private void btnClose_MouseDown(object sender, MouseButtonEventArgs e) // кнопка закрытия окна
+        private async void btnClose_MouseDown(object sender, MouseButtonEventArgs e) // кнопка закрытия окна
         {
             if (e.ChangedButton == MouseButton.Left)
             {
+                FrameManager.AnimationWindow(this, false);
+                await Task.Delay(TimeSpan.FromMilliseconds(1000));
                 this.Close();
             }
         }

@@ -35,5 +35,35 @@ namespace SpaceBaseApp
             story.Children.Add(stringAnimationUsingKeyFrames);
             story.Begin(txt);
         }
+
+
+        public static async void AnimationWindow(Window win, bool increasing = true)
+        {
+            float increment = increasing ? 0.1f : -0.1f;
+            float i = increasing ? 0 : 1;
+            win.Opacity = 0;
+
+            if (increasing)
+            {
+                win.Show();
+            }
+
+            for (; i < 1; i += increment)
+            {
+                win.Opacity = i;
+                await Task.Delay(TimeSpan.FromMilliseconds(25));
+            }
+
+            if (!increasing)
+            {
+                win.Visibility = Visibility.Collapsed;
+                win.Opacity = 0;
+            }
+            else
+            {
+                win.Visibility = Visibility.Visible;
+                win.Opacity = 1;
+            }
+        }
     }
 }
