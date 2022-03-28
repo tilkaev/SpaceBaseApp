@@ -28,6 +28,8 @@ namespace SpaceBaseApp
             FrameManager.TypewriteTextblock(txtIpconfig.Text, txtIpconfig, TimeSpan.FromSeconds(10));          
         }
 
+
+        #region EVENTERS
         private void btnLogin_MouseEnter(object sender, MouseEventArgs e)
         {
             txtChoose.Visibility = Visibility.Visible;
@@ -57,11 +59,13 @@ namespace SpaceBaseApp
         {
             txtChoose3.Visibility = Visibility.Hidden;
         }
+        #endregion
 
-        //////////////////////////////////////////////////////////////
+
 
         private void btnLogin_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) //кнопка логин
         {
+
             string login = tbLogin.Text;
             string password = pbPassword.Password;
 
@@ -71,14 +75,8 @@ namespace SpaceBaseApp
             
             if (login is "" & password is "")
             {
-                //image_password.ToolTip = "Пустые поля";
-                //image_login.ToolTip = "Пустые поля";
+                FrameManager.TypewriteTextblock("Empty fields", txtError, TimeSpan.FromSeconds(0.5));
                 return;
-            }
-            else
-            {
-                //image_login.Visibility = Visibility.Collapsed;
-                //image_password.Visibility = Visibility.Collapsed;
             }
 
 
@@ -104,11 +102,7 @@ namespace SpaceBaseApp
                 }
                 else
                 {
-                    //image_login.Visibility = Visibility.Visible;
-                    //image_login.ToolTip = "Неверный ввод";
-                    //image_password.Visibility = Visibility.Visible;
-                    //image_password.ToolTip = "Неверный ввод";
-                    MessageBox.Show("Неверный ввод");
+                    FrameManager.TypewriteTextblock("Invalid login or password", txtError, TimeSpan.FromSeconds(0.5));
                 }
             }
             catch (Exception)
@@ -118,6 +112,8 @@ namespace SpaceBaseApp
             }
         }
 
+
+        #region WINDOW TITLE
         private void grdHeader_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
@@ -133,5 +129,9 @@ namespace SpaceBaseApp
                 this.Close();
             }
         }
+        #endregion
+
+
+
     }
 }
