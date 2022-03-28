@@ -65,56 +65,56 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ApartmentsPage.xaml.cs">
+    <Compile Include="View\ApartmentsPage.xaml.cs">
       <DependentUpon>ApartmentsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Cam1Page.xaml.cs">
+    <Compile Include="View\Cam1Page.xaml.cs">
       <DependentUpon>Cam1Page.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Cam2Page.xaml.cs">
+    <Compile Include="View\Cam2Page.xaml.cs">
       <DependentUpon>Cam2Page.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CameraView.xaml.cs">
+    <Compile Include="View\CameraView.xaml.cs">
       <DependentUpon>CameraView.xaml</DependentUpon>
     </Compile>
     <Compile Include="FrameManager.cs" />
-    <Compile Include="GuestsPage.xaml.cs">
+    <Compile Include="View\GuestsPage.xaml.cs">
       <DependentUpon>GuestsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="StationStatusPage.xaml.cs">
+    <Compile Include="View\StationStatusPage.xaml.cs">
       <DependentUpon>StationStatusPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SystemScanWindow.xaml.cs">
+    <Compile Include="View\SystemScanWindow.xaml.cs">
       <DependentUpon>SystemScanWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WorkersPage.xaml.cs">
+    <Compile Include="View\WorkersPage.xaml.cs">
       <DependentUpon>WorkersPage.xaml</DependentUpon>
     </Compile>
-    <Page Include="ApartmentsPage.xaml">
+    <Page Include="View\ApartmentsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AuthWindow.xaml">
+    <Page Include="View\AuthWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Cam1Page.xaml">
+    <Page Include="View\Cam1Page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Cam2Page.xaml">
+    <Page Include="View\Cam2Page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CameraView.xaml">
+    <Page Include="View\CameraView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="GuestsPage.xaml">
+    <Page Include="View\GuestsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -122,22 +122,22 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AuthWindow.xaml.cs">
+    <Compile Include="View\AuthWindow.xaml.cs">
       <DependentUpon>AuthWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="StationStatusPage.xaml">
+    <Page Include="View\StationStatusPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SystemScanWindow.xaml">
+    <Page Include="View\SystemScanWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="WorkersPage.xaml">
+    <Page Include="View\WorkersPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
