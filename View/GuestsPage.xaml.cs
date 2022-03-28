@@ -58,7 +58,8 @@ namespace SpaceBaseApp
 
         private void btnDelete_MouseDown(object sender, MouseButtonEventArgs e) // кнопка Delete
         {
-
+            var win = new View.MessageBoxDelete();
+            win.ShowDialog();
         }
     }
 }

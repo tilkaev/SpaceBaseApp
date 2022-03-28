@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
@@ -22,6 +23,8 @@ namespace SpaceBaseApp
         public AuthWindow()
         {
             InitializeComponent();
+            FrameManager.TypewriteTextblock(txtIpconfig.Text, txtIpconfig, TimeSpan.FromSeconds(10));
+            txtIpconfig.Text += "не правильный пароль";
         }
 
         private void btnLogin_MouseEnter(object sender, MouseEventArgs e)

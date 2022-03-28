@@ -81,6 +81,9 @@
     <Compile Include="View\GuestsPage.xaml.cs">
       <DependentUpon>GuestsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\MessageBoxDelete.xaml.cs">
+      <DependentUpon>MessageBoxDelete.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\StationStatusPage.xaml.cs">
       <DependentUpon>StationStatusPage.xaml</DependentUpon>
     </Compile>
@@ -129,6 +132,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\MessageBoxDelete.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\StationStatusPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
