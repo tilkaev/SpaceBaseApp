@@ -65,5 +65,9 @@ namespace SpaceBaseApp
                 win.Opacity = 1;
             }
         }
+
+
+        public int numberOfCamera { get; set; }
+
     }
 }

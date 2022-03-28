@@ -34,7 +34,23 @@
                 </TextBlock.Effect>
             </TextBlock>
         </Border>
-        <Frame x:Name="cameraFrame" Grid.Row="1" Grid.Column="1" NavigationUIVisibility="Hidden" Margin="10"></Frame>
+
+        <Grid  Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Border Background="#005738" BorderThickness="5" BorderBrush="#05fb3b" Width="630" Height="50">
+                <TextBlock x:Name="nameCamera" TextAlignment="Center" FontSize="24" Foreground="#05fb3b" FontFamily="/Fonts/#Handjet Square Double Medium" VerticalAlignment="Center" Margin="10 0 0 0">
+                    <TextBlock.Effect>
+                        <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+            </Border>
+            <Image x:Name="imageCamera" Grid.Row="1" Stretch="Fill"></Image>
+        </Grid>
+
+        <!--<Frame x:Name="cameraFrame" NavigationUIVisibility="Hidden" Margin="10"></Frame>-->
         
         <Border x:Name="btnNext" Grid.Row="1" Grid.Column="2" Background="#005738" BorderBrush="#05fb3b" 
                         BorderThickness="5" Width="50" Height="50" MouseEnter="btnNext_MouseEnter" MouseLeave="btnNext_MouseLeave" MouseDown="btnNext_MouseDown">

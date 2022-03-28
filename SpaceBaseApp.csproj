@@ -84,12 +84,6 @@
     <Compile Include="View\ApartmentsPage.xaml.cs">
       <DependentUpon>ApartmentsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Cam1Page.xaml.cs">
-      <DependentUpon>Cam1Page.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Cam2Page.xaml.cs">
-      <DependentUpon>Cam2Page.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\CameraView.xaml.cs">
       <DependentUpon>CameraView.xaml</DependentUpon>
     </Compile>
@@ -114,14 +108,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\AuthWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\Cam1Page.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\Cam2Page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

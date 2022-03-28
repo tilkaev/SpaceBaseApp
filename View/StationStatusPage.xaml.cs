@@ -20,11 +20,14 @@ namespace SpaceBaseApp
     /// </summary>
     public partial class StationStatusPage : Page
     {
+
         public StationStatusPage()
         {
             InitializeComponent();
         }
 
+
+        #region EVENTS
         private void btnMainDeck_MouseEnter(object sender, MouseEventArgs e)
         {
             var converter = new BrushConverter();
@@ -180,8 +183,7 @@ namespace SpaceBaseApp
             var converter = new BrushConverter();
             btnCam10.Background = (Brush)converter.ConvertFrom("#005738");
         }
-
-        /////////////////////////////////////////////////////////////
+        #endregion
 
         private void btnMainDeck_MouseDown(object sender, MouseButtonEventArgs e) // кнопка MainDeck
         {
@@ -204,6 +206,8 @@ namespace SpaceBaseApp
             win.Show();
         }
 
+
+        /*                  НА УДАЛЕНИЕ
         private void btnCam1_MouseDown(object sender, MouseButtonEventArgs e)
         {
             var win = new CameraView();
@@ -216,46 +220,17 @@ namespace SpaceBaseApp
             var win = new CameraView();
             win.Show();
             FrameManager.CamFrame.Navigate(new Cam2Page());
+        }*/
+
+
+        private void btnCam_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            int index = int.Parse(((Border)sender).Tag.ToString());
+
+            var win = new CameraView(index);
+            win.ShowDialog();
         }
+        
 
-        private void btnCam3_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-
-        } 
-
-        private void btnCam4_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-
-        }   
-
-        private void btnCam5_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-
-        }     
-
-        private void btnCam6_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-
-        }
-
-        private void btnCam7_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-
-        } 
-
-        private void btnCam8_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-
-        }    
-
-        private void btnCam9_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-
-        }  
-
-        private void btnCam10_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-
-        }
     }
 }
