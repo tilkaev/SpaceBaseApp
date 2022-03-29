@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SpaceBaseApp.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -58,8 +59,12 @@ namespace SpaceBaseApp
 
         private void btnDelete_MouseDown(object sender, MouseButtonEventArgs e) // кнопка Delete
         {
-            var win = new View.MessageBoxDelete();
-            win.ShowDialog();
+            bool? Result = new View.UniversalMessageBox("Are you sure want to delete the entry?", MessageType.Delete, MessageButtons.YesNo).ShowDialog();
+
+            if (Result.Value)
+            {
+                Application.Current.Shutdown();
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SpaceBaseApp.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -197,7 +198,12 @@ namespace SpaceBaseApp
 
         private void btnLowerDeck_MouseDown(object sender, MouseButtonEventArgs e)// кнопка LowerDeck
         {
-            brdMap.Visibility = Visibility.Hidden;
+            bool? Result = new View.UniversalMessageBox("In development. Coming soon", MessageType.Info, MessageButtons.Ok).ShowDialog();
+
+            if (Result.Value)
+            {
+                Application.Current.Shutdown();
+            }
         }
 
         private void btnSystemScan_MouseDown(object sender, MouseButtonEventArgs e)// кнопка SystemScan
@@ -229,8 +235,6 @@ namespace SpaceBaseApp
 
             var win = new CameraView(index);
             win.ShowDialog();
-        }
-        
-
+        }        
     }
 }

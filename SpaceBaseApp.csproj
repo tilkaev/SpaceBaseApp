@@ -61,6 +61,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -99,6 +100,9 @@
     </Compile>
     <Compile Include="View\SystemScanWindow.xaml.cs">
       <DependentUpon>SystemScanWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UniversalMessageBox.xaml.cs">
+      <DependentUpon>UniversalMessageBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\WorkersPage.xaml.cs">
       <DependentUpon>WorkersPage.xaml</DependentUpon>
@@ -143,6 +147,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\SystemScanWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UniversalMessageBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

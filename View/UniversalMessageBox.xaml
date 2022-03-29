@@ -1,0 +1,70 @@
+﻿<Window x:Class="SpaceBaseApp.View.UniversalMessageBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SpaceBaseApp.View"
+        mc:Ignorable="d"
+        Title="MessageBoxDelete" Height="200" Width="600" ResizeMode="CanMinimize" WindowStyle="None" WindowStartupLocation="CenterScreen" AllowsTransparency="True" Background="Transparent">
+    <Grid Background="#005738" Margin="5">
+        <Grid.Effect>
+            <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
+        </Grid.Effect>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid x:Name="grdHeader" Grid.ColumnSpan="2" Background="#05fb3b" MouseDown="grdHeader_MouseDown">
+            <TextBlock x:Name="txtTitle" Text="Deleting data" FontSize="24" Foreground="#000"
+                       FontFamily="/Fonts/#Handjet Square Double Medium" Margin="15 5 0 0"></TextBlock>
+            <Image x:Name="btnClose" Source="/Icons/closeicon.png" HorizontalAlignment="Right"
+                   Width="25" Margin="0 3 6 3" MouseDown="btnClose_MouseDown"></Image>
+        </Grid>
+        <TextBlock x:Name="txtText" Grid.Row="1" Text="Are you sure want to delete the entry?" FontSize="24" TextAlignment="Center" Foreground="#05fb3b" FontFamily="/Fonts/#Handjet Square Double Medium" VerticalAlignment="Center">
+            <TextBlock.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <Border Grid.Row="1" BorderBrush="#05fb3b" BorderThickness="0 0 0 5"></Border>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Border x:Name="btnCancel" HorizontalAlignment="Left" Width="150" Height="40"
+                BorderBrush="#05fb3b" BorderThickness="5" Margin="0 0 10 0"
+                MouseEnter="btnCancel_MouseEnter" MouseLeave="btnCancel_MouseLeave" MouseDown="btnCancel_MouseDown" Visibility="Visible">
+                <TextBlock Text="Cancel" FontSize="24" TextAlignment="Center" Foreground="#05fb3b" FontFamily="/Fonts/#Handjet Square Double Medium" VerticalAlignment="Center">
+                    <TextBlock.Effect>
+                        <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+            </Border>
+            <Border x:Name="btnNo" HorizontalAlignment="Left" Width="150" Height="40"
+                BorderBrush="#05fb3b" BorderThickness="5" Margin="0 0 10 0"
+                MouseEnter="btnNo_MouseEnter" MouseLeave="btnNo_MouseLeave" MouseDown="btnNo_MouseDown" Visibility="Visible">
+                <TextBlock Text="No" FontSize="24" TextAlignment="Center" Foreground="#05fb3b" FontFamily="/Fonts/#Handjet Square Double Medium" VerticalAlignment="Center">
+                    <TextBlock.Effect>
+                        <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+            </Border>
+            <Border x:Name="btnYes" HorizontalAlignment="Left" Width="150" Height="40"
+                BorderBrush="#05fb3b" BorderThickness="5" Margin="0 0 10 0"
+                MouseEnter="btnYes_MouseEnter" MouseLeave="btnYes_MouseLeave" MouseDown="btnYes_MouseDown" Visibility="Visible">
+                <TextBlock Text="Yes" FontSize="24" TextAlignment="Center" Foreground="#05fb3b" FontFamily="/Fonts/#Handjet Square Double Medium" VerticalAlignment="Center">
+                    <TextBlock.Effect>
+                        <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+            </Border>
+            <Border x:Name="btnOK" HorizontalAlignment="Left" Width="150" Height="40"
+                BorderBrush="#05fb3b" BorderThickness="5"
+                MouseEnter="btnOK_MouseEnter" MouseLeave="btnOK_MouseLeave" MouseDown="btnOK_MouseDown" Visibility="Visible">
+                <TextBlock Text="OK" FontSize="24" TextAlignment="Center" Foreground="#05fb3b" FontFamily="/Fonts/#Handjet Square Double Medium" VerticalAlignment="Center">
+                    <TextBlock.Effect>
+                        <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+            </Border>
+        </StackPanel>
+
+    </Grid>
+</Window>
