@@ -87,7 +87,7 @@
                         </Style>
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="Deck" Binding="{Binding }" >
+                <DataGridTextColumn Header="Deck" Binding="{Binding Рабочее_название}" >
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="DataGridColumnHeader">
                             <Setter Property="Background" Value="#003824"/>

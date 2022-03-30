@@ -72,7 +72,7 @@ namespace SpaceBaseApp
         public void Show_Table() // Вывод таблицы по индексу
         {
 
-            string sql = String.Format("select * from Сотрудники");
+            string sql = String.Format("select * from Сотрудники, Бронирование, Каюта where Сотрудники.Ид_Сотрудника = Бронирование.Ид_Сотрудника and Каюта.Ид_Каюты = Бронирование.Ид_Каюты");
             sqls.SQLConnect(); // Подключение к БД
             newDataTable = sqls.Inquiry(sql); // Выполняем запрос, возвращаем результат в виде DataTable
             dataTable = newDataTable.Copy();
