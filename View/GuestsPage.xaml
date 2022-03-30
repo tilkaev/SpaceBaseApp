@@ -39,7 +39,7 @@
             </DataGrid.Resources>
 
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Last name" Binding="{Binding хз так надо}"/>
+                <DataGridTextColumn Header="Last name" Binding="{Binding хзтакнадо}"/>
                 <DataGridTextColumn Header="Last name" Binding="{Binding Фамилия}">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="DataGridColumnHeader">
