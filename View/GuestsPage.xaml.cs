@@ -104,7 +104,7 @@ namespace SpaceBaseApp
         public void Show_Table() // Вывод таблицы по индексу
         {
 
-            string sql = String.Format("select * from Клиенты");
+            string sql = String.Format("select * from Клиенты, Бронирование, Каюта");
             sqls.SQLConnect(); // Подключение к БД
             newDataTable = sqls.Inquiry(sql); // Выполняем запрос, возвращаем результат в виде DataTable
             dataTable = newDataTable.Copy();

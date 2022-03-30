@@ -94,7 +94,8 @@ namespace SpaceBaseApp.View
             if (tbFirstName.Text is "")
                 return;
 
-            if (tbDateBirthday.Text is "")
+            DateTime dateOfBirthday;
+            if (!(DateTime.TryParse(tbDateBirthday.Text, out dateOfBirthday)))
                 return;
 
             if (tbPhone.Text is "")
@@ -106,7 +107,6 @@ namespace SpaceBaseApp.View
             string lastName = tbLastName.Text;
             string patronymicName = tbPatronymic.Text;
             string phoneNumber = tbPhone.Text;
-            DateTime dateOfBirthday = DateTime.Parse(tbDateBirthday.Text);
 
 
             sqls.SQLConnect();
