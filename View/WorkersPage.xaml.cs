@@ -26,13 +26,16 @@ namespace SpaceBaseApp
 
         DataTable newDataTable;
         DataTable dataTable;
+
+        SQL sqls;
         public WorkersPage()
         {
             InitializeComponent();
-            string sql = String.Format("select * from Сотрудники");
-            SQL sqls = new SQL();
+            sqls = new SQL();
 
+            Show_Table();
 
+            /*
             try
             {
                 sqls.SQLConnect();
@@ -48,7 +51,7 @@ namespace SpaceBaseApp
             {
                 MessageBox.Show("Ошибка!", "Ошибка!");
                 throw;
-            }
+            }*/
         }
 
         private void btnAdd_MouseEnter(object sender, MouseEventArgs e)
@@ -82,14 +85,53 @@ namespace SpaceBaseApp
 
         }
 
+        public void Show_Table() // Вывод таблицы по индексу
+        {
+
+            string sql = String.Format("select * from Сотрудники");
+            sqls.SQLConnect(); // Подключение к БД
+            newDataTable = sqls.Inquiry(sql); // Выполняем запрос, возвращаем результат в виде DataTable
+            dataTable = newDataTable.Copy();
+            sqls.Close();
+
+
+            tbSearch.Text += ""; // Также обновляет таблицу через метод TextChanged()
+            mainDataGrid.ItemsSource = newDataTable.AsDataView(); // Преобразуем и выводим таблицу
+
+            mainDataGrid.Columns[0].Visibility = Visibility.Collapsed; // Скрываем первый столбец с ID
+
+        }
+
         private void btnDelete_MouseDown(object sender, MouseButtonEventArgs e) // кнопка Delete
         {
-            bool? Result = new View.UniversalMessageBox("Are you sure want to delete the entry?", MessageType.Delete, MessageButtons.YesNo).ShowDialog();
 
-            //if (Result.Value)
-            //{
-            //    Application.Current.Shutdown();
-            //}
+            int row = mainDataGrid.SelectedIndex; // Получение индекса выбранного элемента
+            if (row != -1)
+            {
+                bool? result = new View.UniversalMessageBox("Are you sure to delete entries?", MessageType.Delete, MessageButtons.YesNo).ShowDialog();
+
+                if (result.Value)
+                {
+                    string id = dataTable.Rows[row][0].ToString();
+                    string sql = String.Format("DELETE FROM {0} WHERE {1}='{2}'", "Сотрудники", "Ид_Сотрудника", id);
+
+                    sqls.SQLConnect();
+
+                    if (sqls.Execute(sql))
+                    {
+                        sqls.Close();
+                        new View.UniversalMessageBox("Entry deleted!", MessageType.Info, MessageButtons.Ok).ShowDialog();
+                        Show_Table();
+                    }
+                    else
+                    {
+                        sqls.Close();
+                        MessageBox.Show("Ошибка!", "Ошибка!");
+                    }
+                }
+            }
+            
+
         }
 
         private void Find(string str = "")
@@ -101,7 +143,6 @@ namespace SpaceBaseApp
 
             int num_column = dataTable.Columns.Count;
             dataTable = newDataTable.Copy();
-
 
             if (str != "")
             {
