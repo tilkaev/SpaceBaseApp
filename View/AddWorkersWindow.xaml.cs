@@ -25,16 +25,28 @@ namespace SpaceBaseApp.View
         }
 
         #region Style
-        private void btnBack_MouseEnter(object sender, MouseEventArgs e)
+        private void btnCancel_MouseEnter(object sender, MouseEventArgs e)
         {
             var converter = new BrushConverter();
-            btnBack.Background = (Brush)converter.ConvertFrom("#003120");
+            btnCancel.Background = (Brush)converter.ConvertFrom("#003120");
         }
 
-        private void btnBack_MouseLeave(object sender, MouseEventArgs e)
+        private void btnCancel_MouseLeave(object sender, MouseEventArgs e)
         {
             var converter = new BrushConverter();
-            btnBack.Background = (Brush)converter.ConvertFrom("#005738");
+            btnCancel.Background = (Brush)converter.ConvertFrom("#005738");
+        }        
+
+        private void btnAddWorker_MouseEnter(object sender, MouseEventArgs e)
+        {
+            var converter = new BrushConverter();
+            btnAddWorker.Background = (Brush)converter.ConvertFrom("#003120");
+        }
+
+        private void btnAddWorker_MouseLeave(object sender, MouseEventArgs e)
+        {
+            var converter = new BrushConverter();
+            btnAddWorker.Background = (Brush)converter.ConvertFrom("#005738");
         }
         #endregion
 
@@ -54,9 +66,14 @@ namespace SpaceBaseApp.View
             }
         }
 
-        private void btnBack_MouseDown(object sender, MouseButtonEventArgs e)
+        private void btnCancel_MouseDown(object sender, MouseButtonEventArgs e)
         {
             this.Close();
+        }
+
+        private void btnAddWorker_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
         }
     }
 }

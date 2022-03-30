@@ -149,12 +149,12 @@
                         </Style>
                     </TextBox.Style>
                 </TextBox>
-                <TextBlock Text="Age:" FontSize="24" Foreground="#05fb3b" FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 10 0 0">
+                <TextBlock Text="Date of Birthday:" FontSize="24" Foreground="#05fb3b" FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 10 0 0">
                     <TextBlock.Effect>
                         <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                     </TextBlock.Effect>
                 </TextBlock>
-                <TextBox x:Name="tbAge" Height="30" Width="260" BorderBrush="#05fb3b"
+                <TextBox x:Name="tbDateBirthday" Height="30" Width="260" BorderBrush="#05fb3b"
                              BorderThickness="3" Background="#003824"
                              FontFamily="/Fonts/#Handjet Square Double Medium" Foreground="#05fb3b"
                              Margin="0 5 0 0" FontSize="24" VerticalContentAlignment="Center" SelectionBrush="#05fb3b"
@@ -226,14 +226,25 @@
 
         <Border BorderBrush="#05fb3b" Grid.Row="2" BorderThickness="0 0 0 5"></Border>
 
-        <Border x:Name="btnBack" Grid.Row="3" HorizontalAlignment="Center" Width="200" Height="40"
-                BorderBrush="#05fb3b" BorderThickness="5" Margin="0 0 0 0" MouseDown="btnBack_MouseDown"
-                MouseEnter="btnBack_MouseEnter" MouseLeave="btnBack_MouseLeave">
-            <TextBlock Text="Add a guest" FontSize="24" TextAlignment="Center" Foreground="#05fb3b" FontFamily="/Fonts/#Handjet Square Double Medium" VerticalAlignment="Center">
-                <TextBlock.Effect>
-                    <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
-                </TextBlock.Effect>
-            </TextBlock>
-        </Border>
+        <StackPanel Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+            <Border x:Name="btnCancel" Width="200" Height="40"
+                BorderBrush="#05fb3b" BorderThickness="5" Margin="0 0 0 0" MouseDown="btnCancel_MouseDown"
+                MouseEnter="btnCancel_MouseEnter" MouseLeave="btnCancel_MouseLeave">
+                <TextBlock Text="Cancel" FontSize="24" TextAlignment="Center" Foreground="#05fb3b" FontFamily="/Fonts/#Handjet Square Double Medium" VerticalAlignment="Center">
+                    <TextBlock.Effect>
+                        <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+            </Border>
+            <Border x:Name="btnAddWorker" Width="200" Height="40"
+                BorderBrush="#05fb3b" BorderThickness="5" Margin="10 0 0 0" MouseDown="btnAddWorker_MouseDown"
+                MouseEnter="btnAddWorker_MouseEnter" MouseLeave="btnAddWorker_MouseLeave">
+                <TextBlock Text="Add a worker" FontSize="24" TextAlignment="Center" Foreground="#05fb3b" FontFamily="/Fonts/#Handjet Square Double Medium" VerticalAlignment="Center">
+                    <TextBlock.Effect>
+                        <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+            </Border>
+        </StackPanel>
     </Grid>
 </Window>
