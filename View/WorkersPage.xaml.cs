@@ -82,7 +82,8 @@ namespace SpaceBaseApp
 
         private void btnAdd_MouseDown(object sender, MouseButtonEventArgs e) // кнопка Add
         {
-
+            var win = new AddWorkersWindow();
+            win.ShowDialog();
         }
 
         public void Show_Table() // Вывод таблицы по индексу

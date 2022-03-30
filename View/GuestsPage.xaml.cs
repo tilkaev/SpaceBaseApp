@@ -56,7 +56,6 @@ namespace SpaceBaseApp
         {
             var win = new AddGuestWindow();
             win.ShowDialog();
-            Application.Current.Shutdown();
         }
 
         private void btnDelete_MouseDown(object sender, MouseButtonEventArgs e) // кнопка Delete
