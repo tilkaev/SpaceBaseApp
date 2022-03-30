@@ -26,9 +26,19 @@ namespace SpaceBaseApp
         {
             for (int i = 0; i < 6; i++)
             {
-                last_name.Text = $"A{i+1}";
-                last_border.Text = i.ToString();
-                Border rect = XamlReader.Parse(XamlWriter.Save(rectNormal)) as Border;
+                Border rect;
+                if (i != 6)
+                {
+                    last_name.Text = $"A{i + 1}";
+                    last_border.Text = i.ToString();
+                    rect = XamlReader.Parse(XamlWriter.Save(rectNormal)) as Border;
+                }
+                else
+                {
+                    last_name.Text = $"A{i + 1}";
+                    last_border.Text = i.ToString();
+                    rect = XamlReader.Parse(XamlWriter.Save(rectNormal)) as Border;
+                }
                 rect.Visibility = Visibility.Visible;
                 mainStac1row.Children.Add(rect);
 
@@ -42,7 +52,7 @@ namespace SpaceBaseApp
             {
                 Border rect;
 
-                if (i!=3)
+                if (i != 3)
                 {
                     last_name.Text = $"B{i + 1}";
                     last_border.Text = i.ToString();
@@ -59,10 +69,58 @@ namespace SpaceBaseApp
 
 
                 await Task.Delay(TimeSpan.FromMilliseconds(100));
+            }
+
+
+            for (int i = 0; i < 6; i++)
+            {
+                Border rect;
+
+                if (i != 1)
+                {
+                    last_name.Text = $"C{i + 1}";
+                    last_border.Text = i.ToString();
+                    rect = XamlReader.Parse(XamlWriter.Save(rectNormal)) as Border;
+                }
+                else
+                {
+                    last_nameNotEmpty.Text = $"C{i + 1}";
+                    last_borderNotEmpty.Text = i.ToString();
+                    rect = XamlReader.Parse(XamlWriter.Save(rectNotEmpty)) as Border;
+                }
+                rect.Visibility = Visibility.Visible;
+                mainStac3row.Children.Add(rect);
+
+
+                await Task.Delay(TimeSpan.FromMilliseconds(100));
 
             }
 
-            
+            for (int i = 0; i < 6; i++)
+            {
+                Border rect;
+
+                if (i != 1)
+                {
+                    last_name.Text = $"D{i + 1}";
+                    last_border.Text = i.ToString();
+                    rect = XamlReader.Parse(XamlWriter.Save(rectNormal)) as Border;
+                }
+                else
+                {
+                    last_nameNotEmpty.Text = $"D{i + 1}";
+                    last_borderNotEmpty.Text = i.ToString();
+                    rect = XamlReader.Parse(XamlWriter.Save(rectNotEmpty)) as Border;
+                }
+                rect.Visibility = Visibility.Visible;
+                mainStac4row.Children.Add(rect);
+
+
+                await Task.Delay(TimeSpan.FromMilliseconds(100));
+
+            }
+
+
         }
 
         public ApartmentsPage()

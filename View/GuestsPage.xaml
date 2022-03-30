@@ -76,7 +76,7 @@
                         </Style>
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="Date of birthday" Binding="{Binding Дата_рождения}">
+                <DataGridTextColumn Header="Date of birthday" Binding="{Binding Дата_рождения, StringFormat={}{0:dd.MM.yyyy}}">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="DataGridColumnHeader">
                             <Setter Property="Background" Value="#003824"/>
@@ -88,7 +88,7 @@
                         </Style>
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="Deck" Binding="{Binding Рабочее_название}">
+                <DataGridTextColumn Header="Deck" Binding="{Binding Каюта.Рабочее_название}">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="DataGridColumnHeader">
                             <Setter Property="Background" Value="#003824"/>
