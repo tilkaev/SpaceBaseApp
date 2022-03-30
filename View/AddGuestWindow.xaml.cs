@@ -85,17 +85,25 @@ namespace SpaceBaseApp.View
             if (tbAge.Text is "")
                 return;
 
-            string lastName = tbLastName.Text;
-            string patronymic = tbPatronymic.Text;
+            if (tbNumberApartment.Text is "")
+                return;
+
+
+            string id_deck = dataTable.Rows[cbDeck.SelectedIndex][0].ToString();
             string firstName = tbFirstName.Text;
+            string lastName = tbLastName.Text;
+            string patronymicName = tbPatronymic.Text;
+            string phoneNumber = tbNumberApartment.Text;
             DateTime dateOfBirthday = DateTime.Parse(tbAge.Text);
 
 
             sqls.SQLConnect();
-            string sql2 = String.Format("INSERT INTO Аккредитации (ид_водитель, дата_выдачи, дата_окончания) VALUES('{0}', '{1}', '{2}')", id_driver, date1.ToShortDateString(), date2.ToShortDateString());
+            string sql1 = String.Format(
+                $"INSERT INTO Клиенты (Фамилия, Имя, Отчество, Дата_рождения, Телефон) " +
+                $"VALUES('{lastName}', '{firstName}', '{patronymicName}', '{dateOfBirthday}', '{phoneNumber}')"); //date2.ToShortDateString()
 
 
-            if (sqls.Execute(sql2))
+            if (sqls.Execute(sql1))
             {
                 sqls.Close();
                 MessageBox.Show("Данные записаны", "Ок!");
