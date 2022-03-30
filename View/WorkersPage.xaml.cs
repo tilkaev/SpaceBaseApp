@@ -94,8 +94,6 @@ namespace SpaceBaseApp
             dataTable = newDataTable.Copy();
             sqls.Close();
 
-
-            tbSearch.Text += ""; // Также обновляет таблицу через метод TextChanged()
             mainDataGrid.ItemsSource = newDataTable.AsDataView(); // Преобразуем и выводим таблицу
 
             mainDataGrid.Columns[0].Visibility = Visibility.Collapsed; // Скрываем первый столбец с ID
@@ -122,6 +120,9 @@ namespace SpaceBaseApp
                         sqls.Close();
                         new View.UniversalMessageBox("Entry deleted!", MessageType.Info, MessageButtons.Ok).ShowDialog();
                         Show_Table();
+                        string temp = tbSearch.Text;
+                        tbSearch.Text.Trim();
+                        tbSearch.Text = temp;
                     }
                     else
                     {

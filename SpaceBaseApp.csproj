@@ -220,6 +220,19 @@
   <ItemGroup>
     <Resource Include="Icons\person_red.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Cam10.png" />
+    <Resource Include="Images\Cam2.png" />
+    <Resource Include="Images\Cam3.png" />
+    <Resource Include="Images\Cam3Low.png" />
+    <Resource Include="Images\Cam4.png" />
+    <Resource Include="Images\Cam5.png" />
+    <Resource Include="Images\Cam6.png" />
+    <Resource Include="Images\Cam7.png" />
+    <Resource Include="Images\Cam8.png" />
+    <Resource Include="Images\Cam9-1.png" />
+    <Resource Include="Images\Cam9.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.4.4.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.4.0\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

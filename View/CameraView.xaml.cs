@@ -34,14 +34,14 @@ namespace SpaceBaseApp
         string[] CAMERIMAGES = {
             "/Images/Cam1.png",
             "/Images/Cam2.jpg",
-            "Cam 3 room",
-            "Cam 4 room",
-            "Cam 5 room",
-            "Cam 6 room",
-            "Cam 7 room",
-            "Cam 8 room",
-            "Cam 9 room",
-            "Cam 10 room"
+            "/Images/Cam3.png",
+            "/Images/Cam4.png",
+            "/Images/Cam5.png",
+            "/Images/Cam6.png",
+            "/Images/Cam7.png",
+            "/Images/Cam8.png",
+            "/Images/Cam9.png",
+            "/Images/Cam10.png"
         };
 
 
