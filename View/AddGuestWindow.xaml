@@ -329,12 +329,28 @@
                         <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                     </TextBlock.Effect>
                 </TextBlock>
-                <TextBox x:Name="tbDateBirthday" Height="30" Width="260" BorderBrush="#05fb3b"
+                <DatePicker x:Name="tbDateBirthday" Height="30" Width="260" BorderBrush="#05fb3b"
                              BorderThickness="3" Background="#003824"
                              FontFamily="/Fonts/#Handjet Square Double Medium" Foreground="#05fb3b"
-                             Margin="0 5 0 0" FontSize="24" VerticalContentAlignment="Center" SelectionBrush="#05fb3b"
+                             Margin="0 5 0 0" FontSize="24" VerticalContentAlignment="Center"
                              >
-                    <TextBox.Style>
+                    <DatePicker.Style>
+                        <Style TargetType="{x:Type DatePicker}">
+                            <Style.Resources>
+                                <Style TargetType="DatePickerTextBox">
+                                    <Setter Property="Background" Value="Transparent"/>
+                                    <Setter Property="SelectionBrush" Value="#003824"/>
+                                    <Setter Property="Margin" Value="-3 -3 2 -3"/>
+                                </Style>
+                            </Style.Resources>
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Style.Triggers>
+                                <!-- your triggers here -->
+                            </Style.Triggers>
+                        </Style>
+                    </DatePicker.Style>
+                </DatePicker>
+                <!--<TextBox.Style>
                         <Style TargetType="TextBox">
                             <Setter Property="Template">
                                 <Setter.Value>
@@ -357,8 +373,8 @@
                                 </Setter.Value>
                             </Setter>
                         </Style>
-                    </TextBox.Style>
-                </TextBox>
+                    </TextBox.Style>-->
+
                 <TextBlock Text="Phone:" FontSize="24" Foreground="#05fb3b" FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 10 0 0">
                     <TextBlock.Effect>
                         <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
