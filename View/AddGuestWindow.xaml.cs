@@ -56,7 +56,7 @@ namespace SpaceBaseApp.View
 
         private void btnBack_MouseDown(object sender, MouseButtonEventArgs e)
         {
-
+            this.Close();
         }
     }
 }
