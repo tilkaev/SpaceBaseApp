@@ -88,8 +88,6 @@ namespace SpaceBaseApp.View
             if (tbLastName.Text is "")
                 return;
 
-            if (tbPatronymic.Text is "")
-                return;
 
             if (tbFirstName.Text is "")
                 return;
