@@ -112,7 +112,9 @@ namespace SpaceBaseApp.View
             sqls.SQLConnect();
             string sql1 = String.Format(
                 $"INSERT INTO Клиенты (Фамилия, Имя, Отчество, Дата_рождения, Телефон) " +
-                $"VALUES('{lastName}', '{firstName}', '{patronymicName}', '{dateOfBirthday}', '{phoneNumber}')"); //date2.ToShortDateString()
+                $"VALUES('{lastName}', '{firstName}', '{patronymicName}', '{dateOfBirthday.ToShortDateString()}', '{phoneNumber}')"+
+                $"INSERT INTO Бронирование(Ид_Клиента, Ид_Каюты)" +
+                $"Values(@@identity, {id_deck})");
 
 
             if (sqls.Execute(sql1))
