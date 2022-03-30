@@ -79,7 +79,7 @@ namespace SpaceBaseApp.View
             }
         }
 
-        private void btnBack_MouseDown(object sender, MouseButtonEventArgs e)
+        private void btnAddGuest_MouseDown(object sender, MouseButtonEventArgs e)
         {
 
             if (cbDeck.SelectedIndex is -1)
@@ -94,10 +94,10 @@ namespace SpaceBaseApp.View
             if (tbFirstName.Text is "")
                 return;
 
-            if (tbAge.Text is "")
+            if (tbDateBirthday.Text is "")
                 return;
 
-            if (tbNumberApartment.Text is "")
+            if (tbPhone.Text is "")
                 return;
 
 
@@ -105,8 +105,8 @@ namespace SpaceBaseApp.View
             string firstName = tbFirstName.Text;
             string lastName = tbLastName.Text;
             string patronymicName = tbPatronymic.Text;
-            string phoneNumber = tbNumberApartment.Text;
-            DateTime dateOfBirthday = DateTime.Parse(tbAge.Text);
+            string phoneNumber = tbPhone.Text;
+            DateTime dateOfBirthday = DateTime.Parse(tbDateBirthday.Text);
 
 
             sqls.SQLConnect();
