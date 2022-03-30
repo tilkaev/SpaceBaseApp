@@ -145,6 +145,10 @@ namespace SpaceBaseApp
                     }
                 }
             }
+            else
+            {
+                new View.UniversalMessageBox("Select the line!", MessageType.Warning, MessageButtons.Ok).ShowDialog();
+            }
         }
 
         private void tbSearch_TextChanged(object sender, TextChangedEventArgs e)
