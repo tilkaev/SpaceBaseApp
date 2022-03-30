@@ -58,7 +58,7 @@
                             <Setter Property="BorderBrush" Value="#05fb3b"/>
                             <Setter Property="BorderThickness" Value="0 0 0 2"/>
                             <Setter Property="FontFamily" Value="/Fonts/#Handjet Square Double Medium"/>
-                            <Setter Property="FontSize" Value="18"/>
+                            <Setter Property="FontSize" Value="20"/>
                         </Style>
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
@@ -86,7 +86,7 @@
                         </Style>
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="Deck" Binding="{Binding }">
+                <DataGridTextColumn Header="Deck" Binding="{Binding }" >
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="DataGridColumnHeader">
                             <Setter Property="Background" Value="#003824"/>
