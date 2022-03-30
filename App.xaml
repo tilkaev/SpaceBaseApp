@@ -4,8 +4,6 @@
              xmlns:local="clr-namespace:SpaceBaseApp"
              StartupUri="View/AuthWindow.xaml">
     <Application.Resources>
-        <Style x:Key="CustomFont">
-            <Setter Property="TextElement.FontFamily" Value="/Fonts/#Handjet"></Setter>
-        </Style>
+
     </Application.Resources>
 </Application>
