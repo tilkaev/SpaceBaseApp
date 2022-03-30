@@ -34,26 +34,9 @@ namespace SpaceBaseApp
             sqls = new SQL();
 
             Show_Table();
-
-            /*
-            try
-            {
-                sqls.SQLConnect();
-                newDataTable = sqls.Inquiry(sql); // Выполняем запрос, возвращаем результат в виде DataTable
-                dataTable = newDataTable.Copy();
-                sqls.Close();
-
-                mainDataGrid.ItemsSource = dataTable.AsDataView();
-
-
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Ошибка!", "Ошибка!");
-                throw;
-            }*/
         }
 
+        #region EVENTS
         private void btnAdd_MouseEnter(object sender, MouseEventArgs e)
         {
             var converter = new BrushConverter();
@@ -77,8 +60,8 @@ namespace SpaceBaseApp
             var converter = new BrushConverter();
             btnDelete.Background = (Brush)converter.ConvertFrom("#005738");
         }
+        #endregion
 
-        /////////////////////////////////////////////////////////
 
         private void btnAdd_MouseDown(object sender, MouseButtonEventArgs e) // кнопка Add
         {
@@ -96,7 +79,7 @@ namespace SpaceBaseApp
             sqls.Close();
 
             mainDataGrid.ItemsSource = newDataTable.AsDataView(); // Преобразуем и выводим таблицу
-
+            Find(tbSearch.Text);
             mainDataGrid.Columns[0].Visibility = Visibility.Collapsed; // Скрываем первый столбец с ID
 
         }
@@ -121,9 +104,6 @@ namespace SpaceBaseApp
                         sqls.Close();
                         new View.UniversalMessageBox("Entry deleted!", MessageType.Info, MessageButtons.Ok).ShowDialog();
                         Show_Table();
-                        string temp = tbSearch.Text;
-                        tbSearch.Text.Trim();
-                        tbSearch.Text = temp;
                     }
                     else
                     {

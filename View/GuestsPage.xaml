@@ -14,9 +14,33 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition Width="300"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <DataGrid BorderBrush="#05fb3b" BorderThickness="5" Background="#003824" AutoGenerateColumns="False" ColumnWidth="*">
+        <DataGrid x:Name="mainDataGrid" 
+                  Foreground="#05fb3b"
+                  BorderBrush="#05fb3b"
+                  BorderThickness="5"
+                  Background="#003824"
+                  AutoGenerateColumns="False"
+                  ColumnWidth="*"
+                  IsReadOnly="True"
+                  RowBackground="Transparent"
+                  AlternatingRowBackground="Transparent"
+                  HorizontalGridLinesBrush="#05fb3b"
+                  FontFamily="/Fonts/#Handjet Square Double Medium"
+                  FontSize="20" 
+                  SelectionMode="Single">
+
+            <DataGrid.Resources>
+                <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}" TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="Transparent" />
+                </Style>
+                <Style BasedOn="{StaticResource {x:Type DataGridRowHeader}}" TargetType="{x:Type DataGridRowHeader}">
+                    <Setter Property="Background" Value="Transparent" />
+                </Style>
+            </DataGrid.Resources>
+
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Last name">
+                <DataGridTextColumn Header="Last name" Binding="{Binding хз так надо}"/>
+                <DataGridTextColumn Header="Last name" Binding="{Binding Фамилия}">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="DataGridColumnHeader">
                             <Setter Property="Background" Value="#003824"/>
@@ -28,7 +52,7 @@
                         </Style>
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="First name">
+                <DataGridTextColumn Header="First name" Binding="{Binding Имя}">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="DataGridColumnHeader">
                             <Setter Property="Background" Value="#003824"/>
@@ -40,7 +64,7 @@
                         </Style>
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="Patronymic">
+                <DataGridTextColumn Header="Patronymic" Binding="{Binding Отчество}">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="DataGridColumnHeader">
                             <Setter Property="Background" Value="#003824"/>
@@ -52,7 +76,7 @@
                         </Style>
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="Age">
+                <DataGridTextColumn Header="Date of birthday" Binding="{Binding Дата_рождения}">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="DataGridColumnHeader">
                             <Setter Property="Background" Value="#003824"/>
@@ -64,21 +88,7 @@
                         </Style>
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="Deck">
-                    <DataGridTextColumn.HeaderStyle>
-                        <Style TargetType="DataGridColumnHeader">
-                            <Setter Property="Background" Value="#003824"/>
-                            <Setter Property="Foreground" Value="#05fb3b"/>
-                            <Setter Property="BorderBrush" Value="#05fb3b"/>
-                            <Setter Property="BorderThickness" Value="0 0 0 2"/>
-                            <Setter Property="FontFamily" Value="/Fonts/#Handjet Square Double Medium"/>
-                            <Setter Property="FontSize" Value="20"/>
-                            <Setter Property="SeparatorBrush" Value="#05fb3b"/>
-                            <Setter Property="SeparatorVisibility" Value="Visible"/>
-                        </Style>
-                    </DataGridTextColumn.HeaderStyle>
-                </DataGridTextColumn>
-                <DataGridTextColumn Header="№ Apartment">
+                <DataGridTextColumn Header="Deck" Binding="{Binding }">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="DataGridColumnHeader">
                             <Setter Property="Background" Value="#003824"/>
@@ -103,7 +113,7 @@
                             <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                         </TextBlock.Effect>
                     </TextBlock>
-                    <TextBox x:Name="tbSearch" Height="30" Width="260" BorderBrush="#05fb3b"
+                    <TextBox x:Name="tbSearch" Height="30" Width="260" BorderBrush="#05fb3b" TextChanged="tbSearch_TextChanged"
                              BorderThickness="3" Background="#003824"
                              FontFamily="/Fonts/#Handjet Square Double Medium" Foreground="#05fb3b"
                              Margin="0 5 0 0" FontSize="24" VerticalContentAlignment="Center" SelectionBrush="#05fb3b">

@@ -16,6 +16,7 @@
             <RowDefinition></RowDefinition>
             <RowDefinition Height="60"></RowDefinition>
         </Grid.RowDefinitions>
+        
         <Grid x:Name="grdHeader" Grid.ColumnSpan="2" Background="#05fb3b" MouseDown="grdHeader_MouseDown">
             <TextBlock Text="Adding guests" FontSize="24" Foreground="#000"
                        FontFamily="/Fonts/#Handjet Square Double Medium" Margin="15 5 0 0"></TextBlock>
