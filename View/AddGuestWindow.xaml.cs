@@ -81,7 +81,7 @@ namespace SpaceBaseApp.View
 
         private void btnAddGuest_MouseDown(object sender, MouseButtonEventArgs e)
         {
-
+            FrameManager.TypewriteTextblock("Empty fields", txtError, TimeSpan.FromSeconds(0.5));
             if (cbDeck.SelectedIndex is -1)
                 return;
 
@@ -101,6 +101,7 @@ namespace SpaceBaseApp.View
             if (tbPhone.Text is "")
                 return;
 
+            FrameManager.TypewriteTextblock("", txtError, TimeSpan.FromSeconds(0.5));
 
             string id_deck = dataTable.Rows[cbDeck.SelectedIndex][0].ToString();
             string firstName = tbFirstName.Text;
@@ -120,7 +121,6 @@ namespace SpaceBaseApp.View
             if (sqls.Execute(sql1))
             {
                 sqls.Close();
-                MessageBox.Show("Данные записаны", "Ок!");
                 this.Close();
             }
             else

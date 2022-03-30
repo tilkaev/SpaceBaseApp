@@ -31,10 +31,10 @@ namespace SpaceBaseApp.View
             //dataTable = sqls.Inquiry(sql); // Выполняем запрос, возвращаем результат в виде DataTable
             //sqls.Close();
 
-            foreach (DataRow item in dataTable.Rows)
-            {
-                //cmb_driver.Items.Add(item[1].ToString()); // Заполнение КомбоБокса
-            }
+            //foreach (DataRow item in dataTable.Rows)
+            //{
+            //    //cmb_driver.Items.Add(item[1].ToString()); // Заполнение КомбоБокса
+            //}
         }
 
         #region Style

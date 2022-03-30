@@ -65,8 +65,10 @@ namespace SpaceBaseApp
 
         private void btnAdd_MouseDown(object sender, MouseButtonEventArgs e) // кнопка Add
         {
-            var win = new AddWorkersWindow();
-            win.ShowDialog();
+
+            new View.UniversalMessageBox("In development. Coming soon..", MessageType.Info, MessageButtons.Ok).ShowDialog();
+            //var win = new AddWorkersWindow();
+            //win.ShowDialog();
         }
 
         public void Show_Table() // Вывод таблицы по индексу
@@ -111,6 +113,10 @@ namespace SpaceBaseApp
                         MessageBox.Show("Ошибка!", "Ошибка!");
                     }
                 }
+            }
+            else
+            {
+                new View.UniversalMessageBox("Select the line!", MessageType.Warning, MessageButtons.Ok).ShowDialog();
             }
             
 
