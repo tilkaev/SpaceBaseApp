@@ -190,9 +190,13 @@
             <Image x:Name="btnClose" Source="/Icons/closeicon.png" HorizontalAlignment="Right"
                    Width="25" Margin="0 3 6 3" MouseDown="btnClose_MouseDown"></Image>
         </Grid>
-
-        <Border Grid.Row="1" Width="125" Height="125" VerticalAlignment="Top"
-            BorderBrush="#05fb3b" BorderThickness="5" Margin="0 20 0 0">
+        <TextBlock x:Name="txtError" HorizontalAlignment="Center" VerticalAlignment="Top" Text="" Foreground="#f00" Margin="0 75 0 0" FontFamily="/Fonts/#Handjet Square Double Medium" FontSize="24" Grid.Row="1">
+            <TextBlock.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <Border Grid.Row="1" Width="125" Height="125" HorizontalAlignment="Left" VerticalAlignment="Top"
+            BorderBrush="#05fb3b" BorderThickness="5" Margin="20 20 0 0">
             <Image Source="/Images/peoplesAdd.png" Stretch="Fill"></Image>
         </Border>
 
