@@ -84,7 +84,7 @@ namespace SpaceBaseApp
 
         private void btnDelete_MouseDown(object sender, MouseButtonEventArgs e) // кнопка Delete
         {
-            bool? Result = new View.UniversalMessageBox("Are you sure to delete entries?", MessageType.Delete, MessageButtons.YesNo).ShowDialog();
+            bool? Result = new View.UniversalMessageBox("Are you sure want to delete the entry?", MessageType.Delete, MessageButtons.YesNo).ShowDialog();
 
             //if (Result.Value)
             //{

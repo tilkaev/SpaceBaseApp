@@ -54,17 +54,19 @@ namespace SpaceBaseApp
 
         private void btnAdd_MouseDown(object sender, MouseButtonEventArgs e) // кнопка Add
         {
-
+            var win = new AddGuestWindow();
+            win.ShowDialog();
+            Application.Current.Shutdown();
         }
 
         private void btnDelete_MouseDown(object sender, MouseButtonEventArgs e) // кнопка Delete
         {
             bool? Result = new View.UniversalMessageBox("Are you sure want to delete the entry?", MessageType.Delete, MessageButtons.YesNo).ShowDialog();
 
-            if (Result.Value)
-            {
-                Application.Current.Shutdown();
-            }
+            //if (Result.Value)
+            //{
+            //    Application.Current.Shutdown();
+            //}
         }
     }
 }

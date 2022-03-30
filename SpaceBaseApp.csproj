@@ -82,6 +82,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Core\SQL.cs" />
+    <Compile Include="View\AddGuestWindow.xaml.cs">
+      <DependentUpon>AddGuestWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ApartmentsPage.xaml.cs">
       <DependentUpon>ApartmentsPage.xaml</DependentUpon>
     </Compile>
@@ -104,6 +107,10 @@
     <Compile Include="View\WorkersPage.xaml.cs">
       <DependentUpon>WorkersPage.xaml</DependentUpon>
     </Compile>
+    <Page Include="View\AddGuestWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\ApartmentsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
