@@ -134,7 +134,8 @@ namespace SpaceBaseApp.View
 
         private void btnYes_MouseDown(object sender, MouseButtonEventArgs e)
         {
-
+            this.DialogResult = true;
+            this.Close();
         }
 
         private void btnNo_MouseDown(object sender, MouseButtonEventArgs e)

@@ -200,10 +200,10 @@ namespace SpaceBaseApp
         {
             bool? Result = new View.UniversalMessageBox("In development. Coming soon", MessageType.Info, MessageButtons.Ok).ShowDialog();
 
-            if (Result.Value)
-            {
-                Application.Current.Shutdown();
-            }
+            //if (Result.Value)
+            //{
+            //    Application.Current.Shutdown();
+            //}
         }
 
         private void btnSystemScan_MouseDown(object sender, MouseButtonEventArgs e)// кнопка SystemScan
