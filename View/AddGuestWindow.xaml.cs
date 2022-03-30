@@ -1,5 +1,7 @@
-﻿using System;
+﻿using SpaceBaseApp.Core;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,15 +16,26 @@ using System.Windows.Shapes;
 
 namespace SpaceBaseApp.View
 {
-    /// <summary>
-    /// Логика взаимодействия для AddGuestWindow.xaml
-    /// </summary>
     public partial class AddGuestWindow : Window
     {
+        DataTable dataTable;
+        SQL sqls = new SQL();
         public AddGuestWindow()
         {
             InitializeComponent();
+            string sql = "select Ид_Каюты, concat(Рабочее_название, '-', Название_Каюты) from Каюта"; // Получаем список всех водителей
+
+            sqls.SQLConnect(); // Подключение к БД
+            dataTable = sqls.Inquiry(sql); // Выполняем запрос, возвращаем результат в виде DataTable
+            sqls.Close();
+
+            foreach (DataRow item in dataTable.Rows)
+            {
+                cbDeck.Items.Add(item[1].ToString()); // Заполнение КомбоБокса
+            }
         }
+
+
 
         #region Style
         private void btnBack_MouseEnter(object sender, MouseEventArgs e)
@@ -36,8 +49,6 @@ namespace SpaceBaseApp.View
             var converter = new BrushConverter();
             btnBack.Background = (Brush)converter.ConvertFrom("#005738");
         }
-        #endregion
-
         private void grdHeader_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
@@ -45,6 +56,8 @@ namespace SpaceBaseApp.View
                 this.DragMove();
             }
         }
+        #endregion
+
 
         private void btnClose_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -56,7 +69,49 @@ namespace SpaceBaseApp.View
 
         private void btnBack_MouseDown(object sender, MouseButtonEventArgs e)
         {
+
+            if (cbDeck.SelectedIndex is -1)
+                return;
+
+            if (tbLastName.Text is "")
+                return;
+
+            if (tbPatronymic.Text is "")
+                return;
+
+            if (tbFirstName.Text is "")
+                return;
+
+            if (tbAge.Text is "")
+                return;
+
+            string lastName = tbLastName.Text;
+            string patronymic = tbPatronymic.Text;
+            string firstName = tbFirstName.Text;
+            DateTime dateOfBirthday = DateTime.Parse(tbAge.Text);
+
+
+            sqls.SQLConnect();
+            string sql2 = String.Format("INSERT INTO Аккредитации (ид_водитель, дата_выдачи, дата_окончания) VALUES('{0}', '{1}', '{2}')", id_driver, date1.ToShortDateString(), date2.ToShortDateString());
+
+
+            if (sqls.Execute(sql2))
+            {
+                sqls.Close();
+                MessageBox.Show("Данные записаны", "Ок!");
+                this.Close();
+            }
+            else
+            {
+                sqls.Close();
+                MessageBox.Show("Ошибка!", "Ошибка!");
+            }
+
+
+
+
             this.Close();
         }
+
     }
 }

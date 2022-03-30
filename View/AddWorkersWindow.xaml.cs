@@ -1,5 +1,7 @@
-﻿using System;
+﻿using SpaceBaseApp.Core;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,14 +16,25 @@ using System.Windows.Shapes;
 
 namespace SpaceBaseApp.View
 {
-    /// <summary>
-    /// Логика взаимодействия для AddWorkersWindow.xaml
-    /// </summary>
     public partial class AddWorkersWindow : Window
     {
+
+        DataTable dataTable;
+        SQL sqls = new SQL();
         public AddWorkersWindow()
         {
             InitializeComponent();
+
+            string sql = "select ид_водитель, concat(ид_водитель, ' ', фамилия, ' ', имя, ' ', отчество) from Водители"; // Получаем список всех водителей
+
+            //sqls.SQLConnect(); // Подключение к БД
+            //dataTable = sqls.Inquiry(sql); // Выполняем запрос, возвращаем результат в виде DataTable
+            //sqls.Close();
+
+            foreach (DataRow item in dataTable.Rows)
+            {
+                //cmb_driver.Items.Add(item[1].ToString()); // Заполнение КомбоБокса
+            }
         }
 
         #region Style
