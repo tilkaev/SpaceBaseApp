@@ -198,7 +198,7 @@ namespace SpaceBaseApp
 
         private void btnLowerDeck_MouseDown(object sender, MouseButtonEventArgs e)// кнопка LowerDeck
         {
-            bool? Result = new View.UniversalMessageBox("In development. Coming soon", MessageType.Info, MessageButtons.Ok).ShowDialog();
+            bool? Result = new View.UniversalMessageBox("In development. Coming soon..", MessageType.Info, MessageButtons.Ok).ShowDialog();
 
             //if (Result.Value)
             //{
