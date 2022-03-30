@@ -33,7 +33,7 @@ namespace SpaceBaseApp
             InitializeComponent();
             sqls = new SQL();
 
-            //Show_Table();
+            Show_Table();
         }
 
         private void btnAdd_MouseEnter(object sender, MouseEventArgs e)
