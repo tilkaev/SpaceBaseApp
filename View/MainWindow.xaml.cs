@@ -99,21 +99,37 @@ namespace SpaceBaseApp
         private void btnStationStatus_MouseDown(object sender, MouseButtonEventArgs e) // кнопка Station Status
         {
             mainFrame.Navigate(new StationStatusPage());
+            linesStationStatus.Visibility = Visibility.Visible;
+            linesGuests.Visibility = Visibility.Hidden;
+            linesWorkers.Visibility = Visibility.Hidden;
+            linesApartments.Visibility = Visibility.Hidden;
         }
 
         private void btnGuests_MouseDown(object sender, MouseButtonEventArgs e) // кнопка Guests
         {
             mainFrame.Navigate(new GuestsPage());
+            linesGuests.Visibility = Visibility.Visible;
+            linesStationStatus.Visibility = Visibility.Hidden;
+            linesWorkers.Visibility = Visibility.Hidden;
+            linesApartments.Visibility = Visibility.Hidden;
         }
 
         private void btnWorkers_MouseDown(object sender, MouseButtonEventArgs e) // кнопка Workers
         {
             mainFrame.Navigate(new WorkersPage());
+            linesWorkers.Visibility = Visibility.Visible;
+            linesStationStatus.Visibility = Visibility.Hidden;
+            linesApartments.Visibility = Visibility.Hidden;
+            linesGuests.Visibility = Visibility.Hidden;
         }
 
         private void btnApartments_MouseDown(object sender, MouseButtonEventArgs e) // кнопка Apartments
         {
             mainFrame.Navigate(new ApartmentsPage());
+            linesApartments.Visibility = Visibility.Visible;
+            linesWorkers.Visibility = Visibility.Hidden;
+            linesStationStatus.Visibility = Visibility.Hidden;
+            linesGuests.Visibility = Visibility.Hidden;
         }     
     }
 }

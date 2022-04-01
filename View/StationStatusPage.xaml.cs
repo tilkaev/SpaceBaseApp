@@ -188,13 +188,10 @@ namespace SpaceBaseApp
 
         private void btnMainDeck_MouseDown(object sender, MouseButtonEventArgs e) // кнопка MainDeck
         {
-            if (brdMap.Visibility == Visibility.Hidden)
+            if (brdMap.Visibility == Visibility.Visible)
             {
                 brdLowerMap.Visibility = Visibility.Hidden;
-                brdMap.Visibility = Visibility.Visible;
             }
-            else
-                brdMap.Visibility = Visibility.Hidden;
         }
 
         private void btnLowerDeck_MouseDown(object sender, MouseButtonEventArgs e)// кнопка LowerDeck
@@ -206,13 +203,10 @@ namespace SpaceBaseApp
             //    Application.Current.Shutdown();
             //}
 
-            if (brdLowerMap.Visibility == Visibility.Hidden)
+            if (brdLowerMap.Visibility == Visibility.Visible)
             {
                 brdMap.Visibility = Visibility.Hidden;
-                brdLowerMap.Visibility = Visibility.Visible;
             }
-            else
-                brdLowerMap.Visibility = Visibility.Hidden;
         }
 
         private void btnSystemScan_MouseDown(object sender, MouseButtonEventArgs e)// кнопка SystemScan

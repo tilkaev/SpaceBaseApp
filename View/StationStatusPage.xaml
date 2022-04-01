@@ -44,7 +44,7 @@
             </Border>
         </StackPanel>
         <Border x:Name="brdMap" BorderBrush="#05fb3b" BorderThickness="5"
-                Grid.Row="1" Margin="0 20 0 0" Visibility="Hidden" >
+                Grid.Row="1" Margin="0 20 0 0" Visibility="Visible" >
             <Grid>
                 <Image Source="/Images/LevelMap.png" Stretch="Fill"/>
                 <Border x:Name="btnCam1" Background="#005738" BorderBrush="#05fb3b" BorderThickness="2" Width="50" Height="30" Margin="83,129,827,301" MouseEnter="btnCam1_MouseEnter" MouseLeave="btnCam1_MouseLeave" MouseDown="btnCam_MouseDown" Tag="0">
