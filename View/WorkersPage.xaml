@@ -35,10 +35,12 @@
                 <Style BasedOn="{StaticResource {x:Type DataGridRowHeader}}" TargetType="{x:Type DataGridRowHeader}">
                     <Setter Property="Background" Value="Transparent" />
                 </Style>
-                
+                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" 
+                   Color="#02862e"/>
+                <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" 
+                   Color="#02862e"/>
             </DataGrid.Resources>
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Last name" Binding="{Binding хз так надо}"/>
                 <DataGridTextColumn Header="Last name" Binding="{Binding Фамилия}">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="DataGridColumnHeader">

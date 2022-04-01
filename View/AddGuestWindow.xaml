@@ -162,7 +162,7 @@
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsHighlighted" Value="true">
-                                <Setter TargetName="Border" Property="Background" Value="#FF4F4F4F"/>
+                                <Setter TargetName="Border" Property="Background" Value="#02862e"/>
                             </Trigger>
                             <Trigger Property="IsEnabled" Value="false">
                                 <Setter Property="Foreground" Value="#888888"/>
@@ -343,8 +343,9 @@
                             <Style.Resources>
                                 <Style TargetType="DatePickerTextBox">
                                     <Setter Property="Background" Value="Transparent"/>
-                                    <Setter Property="SelectionBrush" Value="#003824"/>
+                                    <Setter Property="SelectionBrush" Value="#05fb3b"/>
                                     <Setter Property="Margin" Value="-3 -3 2 -3"/>
+                                    <Setter Property="Text" Value="Select date"/>
                                 </Style>
                             </Style.Resources>
                             <Setter Property="Background" Value="Transparent"/>

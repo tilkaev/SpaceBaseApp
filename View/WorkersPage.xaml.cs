@@ -82,7 +82,7 @@ namespace SpaceBaseApp
 
             mainDataGrid.ItemsSource = newDataTable.AsDataView(); // Преобразуем и выводим таблицу
             Find(tbSearch.Text);
-            mainDataGrid.Columns[0].Visibility = Visibility.Collapsed; // Скрываем первый столбец с ID
+            //mainDataGrid.Columns[0].Visibility = Visibility.Collapsed; // Скрываем первый столбец с ID
 
         }
 

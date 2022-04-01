@@ -28,6 +28,21 @@
             <Image x:Name="btnClose" Source="/Icons/closeicon.png" HorizontalAlignment="Right"
                    Width="25" Margin="0 3 6 3" MouseDown="btnClose_MouseDown"></Image>
         </Grid>
+        <Line Grid.Row="1" Grid.ColumnSpan="2"
+    X1="255" Y1="120"
+    X2="235" Y2="120"
+    Stroke="#05fb3b"
+    StrokeThickness="4" />
+        <Line Grid.Row="1" Grid.ColumnSpan="2"
+    X1="255" Y1="50"
+    X2="255" Y2="122"
+    Stroke="#05fb3b"
+    StrokeThickness="4" />
+        <Line Grid.Row="1" Grid.ColumnSpan="2"
+    X1="253" Y1="50"
+    X2="300" Y2="50"
+    Stroke="#05fb3b"
+    StrokeThickness="4" />
         <StackPanel HorizontalAlignment="Center" Grid.Row="1" Margin="0 25 0 0">
             <TextBlock Text="Categories/ Functions" FontSize="24" Foreground="#05fb3b"
                        FontFamily="/Fonts/#Handjet Square Double Medium" HorizontalAlignment="Center">

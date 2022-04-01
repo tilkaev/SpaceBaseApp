@@ -190,6 +190,7 @@ namespace SpaceBaseApp
         {
             if (brdMap.Visibility == Visibility.Hidden)
             {
+                brdLowerMap.Visibility = Visibility.Hidden;
                 brdMap.Visibility = Visibility.Visible;
             }
             else
@@ -198,12 +199,20 @@ namespace SpaceBaseApp
 
         private void btnLowerDeck_MouseDown(object sender, MouseButtonEventArgs e)// кнопка LowerDeck
         {
-            bool? Result = new View.UniversalMessageBox("In development. Coming soon..", MessageType.Info, MessageButtons.Ok).ShowDialog();
+            //bool? Result = new View.UniversalMessageBox("In development. Coming soon..", MessageType.Info, MessageButtons.Ok).ShowDialog();
 
             //if (Result.Value)
             //{
             //    Application.Current.Shutdown();
             //}
+
+            if (brdLowerMap.Visibility == Visibility.Hidden)
+            {
+                brdMap.Visibility = Visibility.Hidden;
+                brdLowerMap.Visibility = Visibility.Visible;
+            }
+            else
+                brdLowerMap.Visibility = Visibility.Hidden;
         }
 
         private void btnSystemScan_MouseDown(object sender, MouseButtonEventArgs e)// кнопка SystemScan
