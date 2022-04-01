@@ -41,29 +41,12 @@ namespace SpaceBaseApp
         {
             float increment = show ? 0.1f : -0.1f;
             float i = show ? 0 : 1;
-            win.Opacity = 0.4;
-
-            //if (show)
-            //{
-            //    win.Show();
-            //}
 
             for (; i >= -0.1 && i <= 1.1 ; i += increment)
             {
                 win.Opacity = i;
                 await Task.Delay(TimeSpan.FromMilliseconds(25));
             }
-
-            //    if (!show)
-            //    {
-            //        win.Visibility = Visibility.Collapsed;
-            //        win.Opacity = 0;
-            //    }
-            //    else
-            //    {
-            //        win.Visibility = Visibility.Visible;
-            //        win.Opacity = 1;
-            //    }
         }
 
 

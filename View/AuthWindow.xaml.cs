@@ -29,6 +29,7 @@ namespace SpaceBaseApp
             tbLogin.Text = "ybor";
             pbPassword.Password = "ybor";
             FrameManager.AnimationWindow(this, true);
+
         }
 
 
@@ -162,8 +163,6 @@ namespace SpaceBaseApp
             }
         }
         #endregion
-
-
 
     }
 }
