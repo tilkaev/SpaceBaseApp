@@ -116,7 +116,10 @@ namespace SpaceBaseApp
                     var win = new MainWindow();
                     win.Opacity = 0;
                     FrameManager.AnimationWindow(this, false);
+
+                    await Task.Delay(TimeSpan.FromSeconds(0.5));
                     this.Visibility = Visibility.Collapsed;
+
                     win.Show(); 
                     FrameManager.AnimationWindow(win, true);
 
