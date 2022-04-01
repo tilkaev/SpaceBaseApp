@@ -28,6 +28,7 @@ namespace SpaceBaseApp
             FrameManager.TypewriteTextblock(txtIpconfig.Text, txtIpconfig, TimeSpan.FromSeconds(10));
             tbLogin.Text = "ybor";
             pbPassword.Password = "ybor";
+            FrameManager.AnimationWindow(this, true);
         }
 
 
@@ -82,7 +83,7 @@ namespace SpaceBaseApp
             win.ShowDialog();
         }
 
-        private void btnLogin_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) //кнопка логин
+        private async void btnLogin_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) //кнопка логин
         {
 
             string login = tbLogin.Text;
@@ -113,14 +114,19 @@ namespace SpaceBaseApp
                 {
                     
                     var win = new MainWindow();
-                    FrameManager.AnimationWindow(win); 
+                    win.Opacity = 0;
                     FrameManager.AnimationWindow(this, false);
+                    this.Visibility = Visibility.Collapsed;
+                    win.Show(); 
+                    FrameManager.AnimationWindow(win, true);
+
                     win.Closed += (sender2, e2) =>
                     {
-                        this.Opacity = 0;
                         tbLogin.Text = "";
                         pbPassword.Password = "";
-                        FrameManager.AnimationWindow(this);
+                        this.Opacity = 0;
+                        this.Visibility = Visibility.Visible;
+                        FrameManager.AnimationWindow(this, true);
                     };
                 }
                 else

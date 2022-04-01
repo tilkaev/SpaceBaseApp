@@ -231,13 +231,13 @@
     <Resource Include="Images\Cam10.png" />
     <Resource Include="Images\Cam2.png" />
     <Resource Include="Images\Cam3.png" />
-    <Resource Include="Images\Cam3Low.png" />
+    <Resource Include="Images\Cam12.png" />
     <Resource Include="Images\Cam4.png" />
     <Resource Include="Images\Cam5.png" />
     <Resource Include="Images\Cam6.png" />
     <Resource Include="Images\Cam7.png" />
     <Resource Include="Images\Cam8.png" />
-    <Resource Include="Images\Cam9-1.png" />
+    <Resource Include="Images\Cam11.png" />
     <Resource Include="Images\Cam9.png" />
   </ItemGroup>
   <ItemGroup>

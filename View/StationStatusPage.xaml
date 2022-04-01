@@ -125,8 +125,8 @@
             <Grid>
                 <Image Source="/Images/LowerMap.png" Stretch="Fill"/>
                 <Canvas>
-                    <Border x:Name="btnCam1Lower" BorderBrush="#05fb3b" BorderThickness="2" Width="100" Height="30" MouseDown="btnCam_MouseDown" Tag="0" Canvas.Left="373" Canvas.Top="4">
-                        <TextBlock Text="cam 1" TextAlignment="Center" FontSize="18" Foreground="#05fb3b" FontFamily="/Fonts/#Handjet Square Double Medium" VerticalAlignment="Center">
+                    <Border x:Name="btnCam1Lower" Tag="10" BorderBrush="#05fb3b" BorderThickness="2" Width="100" Height="30" MouseDown="btnCam_MouseDown" Canvas.Left="373" Canvas.Top="4">
+                        <TextBlock Text="cam 11" TextAlignment="Center" FontSize="18" Foreground="#05fb3b" FontFamily="/Fonts/#Handjet Square Double Medium" VerticalAlignment="Center">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                             </TextBlock.Effect>
@@ -142,8 +142,8 @@
                             </Style>
                         </Border.Style>
                     </Border>
-                    <Border x:Name="btnCam2Lower" BorderBrush="#05fb3b" BorderThickness="2" Width="100" Height="30" MouseDown="btnCam_MouseDown" Tag="0" Canvas.Left="666" Canvas.Top="153">
-                        <TextBlock Text="cam 2" TextAlignment="Center" FontSize="18" Foreground="#05fb3b" FontFamily="/Fonts/#Handjet Square Double Medium" VerticalAlignment="Center">
+                    <Border x:Name="btnCam2Lower" Tag="11" BorderBrush="#05fb3b" BorderThickness="2" Width="100" Height="30" MouseDown="btnCam_MouseDown" Canvas.Left="666" Canvas.Top="153">
+                        <TextBlock Text="cam 12" TextAlignment="Center" FontSize="18" Foreground="#05fb3b" FontFamily="/Fonts/#Handjet Square Double Medium" VerticalAlignment="Center">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                             </TextBlock.Effect>
@@ -159,8 +159,8 @@
                             </Style>
                         </Border.Style>
                     </Border>
-                    <Border x:Name="btnCam3Lower" BorderBrush="#05fb3b" BorderThickness="2" Width="100" Height="30" MouseDown="btnCam_MouseDown" Tag="0" Canvas.Left="258" Canvas.Top="370">
-                        <TextBlock Text="cam 3" TextAlignment="Center" FontSize="18" Foreground="#05fb3b" FontFamily="/Fonts/#Handjet Square Double Medium" VerticalAlignment="Center">
+                    <Border x:Name="btnCam3Lower" Tag="12" BorderBrush="#05fb3b" BorderThickness="2" Width="100" Height="30" MouseDown="btnCam_MouseDown" Canvas.Left="258" Canvas.Top="370">
+                        <TextBlock Text="cam 13" TextAlignment="Center" FontSize="18" Foreground="#05fb3b" FontFamily="/Fonts/#Handjet Square Double Medium" VerticalAlignment="Center">
                             <TextBlock.Effect>
                                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                             </TextBlock.Effect>

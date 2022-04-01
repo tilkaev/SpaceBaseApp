@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:SpaceBaseApp"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
+        Opacity=".1"
         Title="Авторизация" Height="720" Width="1080" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
     
     <Grid Background="Black" Margin="5">

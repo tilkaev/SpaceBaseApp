@@ -37,33 +37,33 @@ namespace SpaceBaseApp
         }
 
 
-        public static async void AnimationWindow(Window win, bool increasing = true)
+        public static async void AnimationWindow(Window win, bool show = true)
         {
-            float increment = increasing ? 0.1f : -0.1f;
-            float i = increasing ? 0 : 1;
-            win.Opacity = 0;
+            float increment = show ? 0.1f : -0.1f;
+            float i = show ? 0 : 1;
+            win.Opacity = 0.4;
 
-            if (increasing)
-            {
-                win.Show();
-            }
+            //if (show)
+            //{
+            //    win.Show();
+            //}
 
-            for (; i < 1; i += increment)
+            for (; i >= -0.1 && i <= 1.1 ; i += increment)
             {
                 win.Opacity = i;
                 await Task.Delay(TimeSpan.FromMilliseconds(25));
             }
 
-            if (!increasing)
-            {
-                win.Visibility = Visibility.Collapsed;
-                win.Opacity = 0;
-            }
-            else
-            {
-                win.Visibility = Visibility.Visible;
-                win.Opacity = 1;
-            }
+            //    if (!show)
+            //    {
+            //        win.Visibility = Visibility.Collapsed;
+            //        win.Opacity = 0;
+            //    }
+            //    else
+            //    {
+            //        win.Visibility = Visibility.Visible;
+            //        win.Opacity = 1;
+            //    }
         }
 
 

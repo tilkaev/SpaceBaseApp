@@ -28,7 +28,10 @@ namespace SpaceBaseApp
             "Cam 7 room",
             "Cam 8 room",
             "Cam 9 room",
-            "Cam 10 room"
+            "Cam 10 room",
+            "Cam 11 room",
+            "Cam 12 room",
+            "Cam 13 room",
         };
 
         string[] CAMERIMAGES = {
@@ -41,7 +44,10 @@ namespace SpaceBaseApp
             "/Images/Cam7.png",
             "/Images/Cam8.png",
             "/Images/Cam9.png",
-            "/Images/Cam10.png"
+            "/Images/Cam10.png",
+            "/Images/Cam11.png",
+            "/Images/Cam12.png",
+            "/Images/Cam3.png"
         };
 
 
@@ -51,8 +57,7 @@ namespace SpaceBaseApp
         {
             this.indexCamera = indexCamera;
             InitializeComponent();
-            nameCamera.Text = CAMERANAMES[indexCamera];
-
+            FrameManager.TypewriteTextblock(CAMERANAMES[indexCamera], nameCamera, TimeSpan.FromSeconds(0.2));
 
 
             BitmapImage bi3 = new BitmapImage();
@@ -124,10 +129,10 @@ namespace SpaceBaseApp
                 temp--;
             }
 
-            if (temp >= 0 && temp < 10)
+            if (temp >= 0 && temp < 13)
             {
                 indexCamera = temp;
-                nameCamera.Text = CAMERANAMES[indexCamera];
+                FrameManager.TypewriteTextblock(CAMERANAMES[indexCamera], nameCamera, TimeSpan.FromSeconds(0.2));
 
                 BitmapImage bi3 = new BitmapImage();
                 bi3.BeginInit();

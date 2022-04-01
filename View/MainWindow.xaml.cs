@@ -23,6 +23,7 @@ namespace SpaceBaseApp
             InitializeComponent();
         }
 
+        #region EVENTS
         private void btnStationStatus_MouseEnter(object sender, MouseEventArgs e)
         {
             var converter = new BrushConverter();
@@ -70,8 +71,7 @@ namespace SpaceBaseApp
             var converter = new BrushConverter();
             btnApartments.Background = (Brush)converter.ConvertFrom("#005738");
         }
-
-        /////////////////////////////////////////////
+        #endregion
 
         private void grdHeader_MouseDown(object sender, MouseButtonEventArgs e) // перетаскивание окна
         {
