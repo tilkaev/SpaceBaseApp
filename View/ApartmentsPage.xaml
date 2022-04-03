@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="640" d:DesignWidth="980"
       Title="ApartmentsPage">
-    
+
     <Page.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -99,7 +99,7 @@
             </Setter>
         </Style>
     </Page.Resources>
-    
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -122,30 +122,126 @@
         </Border>
 
         <StackPanel Grid.Row="1" Margin="0 10 0 0">
-            <StackPanel x:Name="mainStac1row" Orientation="Horizontal">
-                
-                <Border x:Name="rectNormal" Visibility="Collapsed" Background="#005738" BorderBrush="#05fb3b" 
-                        BorderThickness="3" Width="100" Height="100" Margin="20 0 0 0">
-                    <StackPanel>
-                        <TextBlock Name="last_name" Text="AA" TextAlignment="Center" FontSize="24" Foreground="#05fb3b" 
-                                   FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
-                            <TextBlock.Effect>
-                                <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
-                            </TextBlock.Effect>
-                        </TextBlock>
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 0">
-                            <TextBlock Name="last_border" Text="1" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
-                                       FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
-                                <TextBlock.Effect>
-                                    <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
-                                </TextBlock.Effect>
-                            </TextBlock>
-                            <Image Source="/Icons/person.png" Width="20"></Image>
-                        </StackPanel>
-                    </StackPanel>
-                </Border>
 
-                <Border x:Name="rectNotEmpty" Visibility="Collapsed" Background="#570505" BorderBrush="#f00" 
+            <ListView Margin="5 0 0 0"
+                      Background="Transparent"
+                      x:Name="lViewAparts" 
+                      ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                      BorderThickness="0">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center"></WrapPanel>
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Button Name="btndil" Click="btndil_Click" Tag="{Binding Ид_Каюты}">
+                            <Button.Style>
+                                <Style TargetType="{x:Type Button}">
+                                    <Setter Property="Background" Value="Transparent"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="{x:Type Button}">
+                                                <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="1">
+                                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="Transparent"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                            <Button.Template>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border x:Name="rectNormal" BorderBrush="#05fb3b" 
+                                    BorderThickness="3" Width="100" Height="100" Margin="10 0 0 10" HorizontalAlignment="Left">
+                                        <Border.Style>
+                                            <Style>
+                                                <Setter Property="Border.Background" Value="#005738"/>
+                                                <Style.Triggers>
+                                                    <Trigger Property="Border.IsMouseOver" Value="True">
+                                                        <Setter Property="Border.Background" Value="#003120" />
+                                                    </Trigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Border.Style>
+                                        <StackPanel>
+                                            <TextBlock Name="last_name" Text="{Binding Рабочее_название}" TextAlignment="Center" FontSize="24" Foreground="#05fb3b" 
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
+                                                <TextBlock.Effect>
+                                                    <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
+                                                </TextBlock.Effect>
+                                            </TextBlock>
+                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 0">
+                                                <TextBlock Name="last_border" Text="{Binding Макс_кол_во}" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
+                                                    FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
+                                                    <TextBlock.Effect>
+                                                        <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
+                                                    </TextBlock.Effect>
+                                                </TextBlock>
+                                                <Image Source="/Icons/person.png" Width="20"></Image>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                        <Setter Property="BorderThickness" Value="0" />
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                                    <Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="True">
+                                        <ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <MultiTrigger>
+                                            <MultiTrigger.Conditions>
+                                                <Condition Property="IsMouseOver" Value="True"/>
+                                            </MultiTrigger.Conditions>
+                                            <Setter Property="Background" TargetName="Bd" Value="Transparent"/>
+                                            <Setter Property="BorderBrush" TargetName="Bd" Value="Transparent"/>
+                                        </MultiTrigger>
+                                        <MultiTrigger>
+                                            <MultiTrigger.Conditions>
+                                                <Condition Property="Selector.IsSelectionActive" Value="False"/>
+                                                <Condition Property="IsSelected" Value="True"/>
+                                            </MultiTrigger.Conditions>
+                                            <Setter Property="Background" TargetName="Bd" Value="Transparent"/>
+                                            <Setter Property="BorderBrush" TargetName="Bd" Value="Transparent"/>
+                                        </MultiTrigger>
+                                        <MultiTrigger>
+                                            <MultiTrigger.Conditions>
+                                                <Condition Property="Selector.IsSelectionActive" Value="True"/>
+                                                <Condition Property="IsSelected" Value="True"/>
+                                            </MultiTrigger.Conditions>
+                                            <Setter Property="Background" TargetName="Bd" Value="Transparent"/>
+                                            <Setter Property="BorderBrush" TargetName="Bd" Value="Transparent"/>
+                                        </MultiTrigger>
+                                        <Trigger Property="IsEnabled" Value="False">
+                                            <Setter Property="TextElement.Foreground" TargetName="Bd" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </ListView.ItemContainerStyle>
+
+            </ListView>
+
+
+
+            <!--<Border x:Name="rectNotEmpty" Visibility="Collapsed" Background="#570505" BorderBrush="#f00" 
                         BorderThickness="3" Width="100" Height="100" Margin="20 0 0 0">
                     <StackPanel>
                         <TextBlock Name="last_nameNotEmpty" Text="AA" TextAlignment="Center" FontSize="24" Foreground="#f00"
@@ -164,9 +260,9 @@
                             <Image Source="/Icons/person_red.png" Width="20"></Image>
                         </StackPanel>
                     </StackPanel>
-                </Border>
+                </Border>-->
 
-                    <!--<Border x:Name="rectA2" Background="#570505" BorderBrush="#f00" 
+            <!--<Border x:Name="rectA2" Background="#570505" BorderBrush="#f00" 
                         BorderThickness="3" Width="100" Height="100" Margin="20 0 0 0">
                     <StackPanel>
                         <TextBlock Text="A2" TextAlignment="Center" FontSize="24" Foreground="#f00"
@@ -389,13 +485,6 @@
                         </StackPanel>
                     </StackPanel>
                 </Border>-->
-                
-            </StackPanel>
-
-            <StackPanel x:Name="mainStac2row" Orientation="Horizontal" Margin="0 20 0 0">
-
-            </StackPanel>
-            
         </StackPanel>
 
         <Border Grid.Row="2" Background="#005738" BorderThickness="5" BorderBrush="#05fb3b"
@@ -409,9 +498,124 @@
         </Border>
 
         <StackPanel Grid.Row="3" Margin="0 10 0 0">
-            <StackPanel  x:Name="mainStac3row" Orientation="Horizontal">
+
+            <ListView Margin="5 0 0 0"
+                      Background="Transparent"
+                      x:Name="lViewAparts2" 
+                      ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                      BorderThickness="0">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center"></WrapPanel>
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Button Name="btndil" Click="btndil_Click" Tag="{Binding Ид_Каюты}">
+                            <Button.Style>
+                                <Style TargetType="{x:Type Button}">
+                                    <Setter Property="Background" Value="Transparent"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="{x:Type Button}">
+                                                <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="1">
+                                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="Transparent"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                            <Button.Template>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border x:Name="rectNormal" BorderBrush="#05fb3b" 
+                                    BorderThickness="3" Width="100" Height="100" Margin="10 0 0 10" HorizontalAlignment="Left">
+                                        <Border.Style>
+                                            <Style>
+                                                <Setter Property="Border.Background" Value="#005738"/>
+                                                <Style.Triggers>
+                                                    <Trigger Property="Border.IsMouseOver" Value="True">
+                                                        <Setter Property="Border.Background" Value="#003120" />
+                                                    </Trigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Border.Style>
+                                        <StackPanel>
+                                            <TextBlock Name="last_name" Text="{Binding Рабочее_название}" TextAlignment="Center" FontSize="24" Foreground="#05fb3b" 
+                                   FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 20 0 0">
+                                                <TextBlock.Effect>
+                                                    <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
+                                                </TextBlock.Effect>
+                                            </TextBlock>
+                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 0">
+                                                <TextBlock Name="last_border" Text="{Binding Макс_кол_во}" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
+                                                    FontFamily="/Fonts/#Handjet Square Double Medium" Margin="0 3 0 0">
+                                                    <TextBlock.Effect>
+                                                        <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
+                                                    </TextBlock.Effect>
+                                                </TextBlock>
+                                                <Image Source="/Icons/person.png" Width="20"></Image>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
                 
-                <!--<Border x:Name="rectC1" Background="#005738" BorderBrush="#05fb3b" BorderThickness="3"
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                        <Setter Property="BorderThickness" Value="0" />
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                                    <Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="True">
+                                        <ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <MultiTrigger>
+                                            <MultiTrigger.Conditions>
+                                                <Condition Property="IsMouseOver" Value="True"/>
+                                            </MultiTrigger.Conditions>
+                                            <Setter Property="Background" TargetName="Bd" Value="Transparent"/>
+                                            <Setter Property="BorderBrush" TargetName="Bd" Value="Transparent"/>
+                                        </MultiTrigger>
+                                        <MultiTrigger>
+                                            <MultiTrigger.Conditions>
+                                                <Condition Property="Selector.IsSelectionActive" Value="False"/>
+                                                <Condition Property="IsSelected" Value="True"/>
+                                            </MultiTrigger.Conditions>
+                                            <Setter Property="Background" TargetName="Bd" Value="Transparent"/>
+                                            <Setter Property="BorderBrush" TargetName="Bd" Value="Transparent"/>
+                                        </MultiTrigger>
+                                        <MultiTrigger>
+                                            <MultiTrigger.Conditions>
+                                                <Condition Property="Selector.IsSelectionActive" Value="True"/>
+                                                <Condition Property="IsSelected" Value="True"/>
+                                            </MultiTrigger.Conditions>
+                                            <Setter Property="Background" TargetName="Bd" Value="Transparent"/>
+                                            <Setter Property="BorderBrush" TargetName="Bd" Value="Transparent"/>
+                                        </MultiTrigger>
+                                        <Trigger Property="IsEnabled" Value="False">
+                                            <Setter Property="TextElement.Foreground" TargetName="Bd" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </ListView.ItemContainerStyle>
+                
+            </ListView>
+
+            <!--<Border x:Name="rectC1" Background="#005738" BorderBrush="#05fb3b" BorderThickness="3"
                         Width="100" Height="100">
                     <StackPanel>
                         <TextBlock Text="C1" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
@@ -431,8 +635,8 @@
                         </StackPanel>
                     </StackPanel>
                 </Border>-->
-                
-                <!--<Border x:Name="rectC2" Background="#005738" BorderBrush="#05fb3b" BorderThickness="3"
+
+            <!--<Border x:Name="rectC2" Background="#005738" BorderBrush="#05fb3b" BorderThickness="3"
                         Width="100" Height="100" Margin="20 0 0 0">
                     <StackPanel>
                         <TextBlock Text="C2" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
@@ -532,10 +736,8 @@
                         </StackPanel>
                     </StackPanel>
                 </Border>-->
-            </StackPanel>
 
-            <StackPanel  x:Name="mainStac4row" Orientation="Horizontal" Margin="0 20 0 0">
-                <!--<Border x:Name="rectD1" Background="#005738" BorderBrush="#05fb3b" BorderThickness="3"
+            <!--<Border x:Name="rectD1" Background="#005738" BorderBrush="#05fb3b" BorderThickness="3"
                         Width="100" Height="100">
                     <StackPanel>
                         <TextBlock Text="D1" TextAlignment="Center" FontSize="24" Foreground="#05fb3b"
@@ -655,7 +857,6 @@
                         </StackPanel>
                     </StackPanel>
                 </Border>-->
-            </StackPanel>
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.RowSpan="4" VerticalAlignment="Center" HorizontalAlignment="Right">
@@ -669,43 +870,43 @@
             </Border>
             <Border Background="#005738" BorderThickness="5 5 5 5" BorderBrush="#05fb3b" Width="225" Height="230">
                 <StackPanel VerticalAlignment="Center">
-                    <TextBlock Text="Number: A1" FontSize="24" Foreground="#05fb3b"
+                    <TextBlock x:Name="txtNumberKayuta" Text="" FontSize="24" Foreground="#05fb3b"
                                    FontFamily="/Fonts/#Handjet Square Double Medium" Margin="15 0 0 0">
                         <TextBlock.Effect>
                             <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                         </TextBlock.Effect>
                     </TextBlock>
-                    <TextBlock Text="Name: Nemesis" FontSize="24" Foreground="#05fb3b"
+                    <TextBlock x:Name="txtNameKayuta" FontSize="24" Foreground="#05fb3b"
                                    FontFamily="/Fonts/#Handjet Square Double Medium" Margin="15 10 0 0">
                         <TextBlock.Effect>
                             <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                         </TextBlock.Effect>
                     </TextBlock>
-                    <TextBlock Text="Status: Free" FontSize="24" Foreground="#05fb3b"
+                    <TextBlock x:Name="txtStatus" FontSize="24" Foreground="#05fb3b"
                                    FontFamily="/Fonts/#Handjet Square Double Medium" Margin="15 10 0 0">
                         <TextBlock.Effect>
                             <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                         </TextBlock.Effect>
                     </TextBlock>
-                    <TextBlock Text="Capacity: 3" FontSize="24" Foreground="#05fb3b"
+                    <TextBlock x:Name="txtMaxCount" FontSize="24" Foreground="#05fb3b"
                                    FontFamily="/Fonts/#Handjet Square Double Medium" Margin="15 10 0 0">
                         <TextBlock.Effect>
                             <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                         </TextBlock.Effect>
                     </TextBlock>
-                    <TextBlock Text="Class: Luxury" FontSize="24" Foreground="#05fb3b"
+                    <TextBlock x:Name="txtClass" FontSize="24" Foreground="#05fb3b"
                                    FontFamily="/Fonts/#Handjet Square Double Medium" Margin="15 10 0 0">
                         <TextBlock.Effect>
                             <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                         </TextBlock.Effect>
                     </TextBlock>
-                    <TextBlock Text="Cost: 500$" FontSize="24" Foreground="#05fb3b"
+                    <TextBlock x:Name="txtCost" FontSize="24" Foreground="#05fb3b"
                                    FontFamily="/Fonts/#Handjet Square Double Medium" Margin="15 10 0 0">
                         <TextBlock.Effect>
                             <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#000"/>
                         </TextBlock.Effect>
                     </TextBlock>
-                </StackPanel>   
+                </StackPanel>
                 <!--<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                     <StackPanel Orientation="Horizontal">
                         <CheckBox x:Name="chkbInNeedRepair" Style="{DynamicResource CheckBoxStyle1}"
